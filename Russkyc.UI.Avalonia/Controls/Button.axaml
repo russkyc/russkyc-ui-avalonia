@@ -3,13 +3,13 @@
     <!-- Design Preview -->
     <Design.PreviewWith>
         <Border Padding="20" Background="{DynamicResource BackgroundBrush}">
-            <StackPanel Orientation="Horizontal" Spacing="7">
-                <Button Content="Primary" />
-                <Button Classes="Destructive" Content="Destructive" />
-                <Button Classes="Outline" Content="Outline" />
-                <Button Classes="Ghost" Content="Ghost" />
-                <Button Classes="Link" Content="Link" />
-                <Button Content="Disabled" IsEnabled="False" />
+            <StackPanel Orientation="Vertical" Spacing="7" Width="200">
+                <Button HorizontalAlignment="Stretch" Content="Primary" />
+                <Button HorizontalAlignment="Stretch" Classes="Destructive" Content="Destructive" />
+                <Button HorizontalAlignment="Stretch" Classes="Outline" Content="Outline" />
+                <Button HorizontalAlignment="Stretch" Classes="Ghost" Content="Ghost" />
+                <Button HorizontalAlignment="Stretch" Classes="Link" Content="Link" />
+                <Button HorizontalAlignment="Stretch" Content="Disabled" IsEnabled="False" />
             </StackPanel>
         </Border>
     </Design.PreviewWith>
@@ -48,8 +48,8 @@
                         Content="{TemplateBinding Content}"
                         ContentTemplate="{TemplateBinding ContentTemplate}"
                         RecognizesAccessKey="True"
-                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                 </Grid>
             </ControlTemplate>
         </Setter>
