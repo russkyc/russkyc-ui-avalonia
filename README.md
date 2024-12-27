@@ -178,12 +178,8 @@ This project is licensed under the [MIT License](LICENSE.md)
 <h2 align="center">Special Thanks</h2>
 
 <div align="center">
-    <a href="https://www.jetbrains.com/community/opensource/#support">
-        <img width="48px" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains logo">
-    </a>
-    <a href="https://www.jetbrains.com/community/opensource/#support">
-        <img width="48px" src="https://avatars.githubusercontent.com/u/139895814?s=48&v=4" alt="shadcn/ui logo">
-    </a>
+    <img width="48px" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains logo">
+    <img width="48px" src="https://avatars.githubusercontent.com/u/139895814?s=48&v=4" alt="shadcn/ui logo">
 </div>
 
 <p style="text-align: justify">
