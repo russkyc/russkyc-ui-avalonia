@@ -63,7 +63,8 @@ All components use the defaults and theme provided in this template.
     <!-- Defaults -->
     <CornerRadius x:Key="Radius">5</CornerRadius>
     <Thickness x:Key="BorderThickness">1</Thickness>
-    <Thickness x:Key="Padding">12,6</Thickness>
+    <Thickness x:Key="ActiveBorderThickness">2</Thickness>
+    <Thickness x:Key="Padding">12,7</Thickness>
     <!-- Theme -->
     <ResourceDictionary.ThemeDictionaries>
         <!-- Light -->
