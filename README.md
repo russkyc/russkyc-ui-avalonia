@@ -90,29 +90,8 @@ All components use the defaults and theme provided in this template.
             <Color x:Key="LightenOverlay">#12FFFFFF</Color>
             <Color x:Key="DarkOverlay">#06000000</Color>
             <Color x:Key="DarkenOverlay">#12000000</Color>
-            <!-- Brushes -->
-            <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource Background}" />
-            <SolidColorBrush x:Key="ForegroundBrush" Color="{DynamicResource Foreground}" />
-            <SolidColorBrush x:Key="CardBrush" Color="{DynamicResource Card}" />
-            <SolidColorBrush x:Key="CardForegroundBrush" Color="{DynamicResource CardForeground}" />
-            <SolidColorBrush x:Key="PopoverBrush" Color="{DynamicResource Popover}" />
-            <SolidColorBrush x:Key="PopoverForegroundBrush" Color="{DynamicResource PopoverForeground}" />
-            <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource Primary}" />
-            <SolidColorBrush x:Key="PrimaryForegroundBrush" Color="{DynamicResource PrimaryForeground}" />
-            <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource Secondary}" />
-            <SolidColorBrush x:Key="SecondaryForegroundBrush" Color="{DynamicResource SecondaryForeground}" />
-            <SolidColorBrush x:Key="MutedBrush" Color="{DynamicResource Muted}" />
-            <SolidColorBrush x:Key="MutedForegroundBrush" Color="{DynamicResource MutedForeground}" />
-            <SolidColorBrush x:Key="AccentBrush" Color="{DynamicResource Accent}" />
-            <SolidColorBrush x:Key="AccentForegroundBrush" Color="{DynamicResource AccentForeground}" />
-            <SolidColorBrush x:Key="DestructiveBrush" Color="{DynamicResource Destructive}" />
-            <SolidColorBrush x:Key="DestructiveForegroundBrush" Color="{DynamicResource DestructiveForeground}" />
-            <SolidColorBrush x:Key="BorderBrush" Color="{DynamicResource Border}" />
-            <SolidColorBrush x:Key="InputBrush" Color="{DynamicResource Input}" />
-            <SolidColorBrush x:Key="LightOverlayBrush" Color="{DynamicResource LightOverlay}"/>
-            <SolidColorBrush x:Key="LightenOverlayBrush" Color="{DynamicResource LightenOverlay}"/>
-            <SolidColorBrush x:Key="DarkOverlayBrush" Color="{DynamicResource DarkOverlay}"/>
-            <SolidColorBrush x:Key="DarkenOverlayBrush" Color="{DynamicResource DarkenOverlay}"/>
+            <Color x:Key="SurfaceOverlay">#06000000</Color>
+            <Color x:Key="SurfaceOverlayDeepen">#12000000</Color>
         </ResourceDictionary>
         <!-- Dark -->
         <ResourceDictionary x:Key="Dark">
@@ -139,29 +118,8 @@ All components use the defaults and theme provided in this template.
             <Color x:Key="LightenOverlay">#12FFFFFF</Color>
             <Color x:Key="DarkOverlay">#06000000</Color>
             <Color x:Key="DarkenOverlay">#12000000</Color>
-            <!-- Brushes -->
-            <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource Background}" />
-            <SolidColorBrush x:Key="ForegroundBrush" Color="{DynamicResource Foreground}" />
-            <SolidColorBrush x:Key="CardBrush" Color="{DynamicResource Card}" />
-            <SolidColorBrush x:Key="CardForegroundBrush" Color="{DynamicResource CardForeground}" />
-            <SolidColorBrush x:Key="PopoverBrush" Color="{DynamicResource Popover}" />
-            <SolidColorBrush x:Key="PopoverForegroundBrush" Color="{DynamicResource PopoverForeground}" />
-            <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource Primary}" />
-            <SolidColorBrush x:Key="PrimaryForegroundBrush" Color="{DynamicResource PrimaryForeground}" />
-            <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource Secondary}" />
-            <SolidColorBrush x:Key="SecondaryForegroundBrush" Color="{DynamicResource SecondaryForeground}" />
-            <SolidColorBrush x:Key="MutedBrush" Color="{DynamicResource Muted}" />
-            <SolidColorBrush x:Key="MutedForegroundBrush" Color="{DynamicResource MutedForeground}" />
-            <SolidColorBrush x:Key="AccentBrush" Color="{DynamicResource Accent}" />
-            <SolidColorBrush x:Key="AccentForegroundBrush" Color="{DynamicResource AccentForeground}" />
-            <SolidColorBrush x:Key="DestructiveBrush" Color="{DynamicResource Destructive}" />
-            <SolidColorBrush x:Key="DestructiveForegroundBrush" Color="{DynamicResource DestructiveForeground}" />
-            <SolidColorBrush x:Key="BorderBrush" Color="{DynamicResource Border}" />
-            <SolidColorBrush x:Key="InputBrush" Color="{DynamicResource Input}" />
-            <SolidColorBrush x:Key="LightOverlayBrush" Color="{DynamicResource LightOverlay}"/>
-            <SolidColorBrush x:Key="LightenOverlayBrush" Color="{DynamicResource LightenOverlay}"/>
-            <SolidColorBrush x:Key="DarkOverlayBrush" Color="{DynamicResource DarkOverlay}"/>
-            <SolidColorBrush x:Key="DarkenOverlayBrush" Color="{DynamicResource DarkenOverlay}"/>
+            <Color x:Key="SurfaceOverlay">#06FFFFFF</Color>
+            <Color x:Key="SurfaceOverlayDeepen">#12FFFFFF</Color>
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>

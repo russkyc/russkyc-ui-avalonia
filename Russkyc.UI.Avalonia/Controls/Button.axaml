@@ -103,13 +103,13 @@
             <!-- Hover State -->
             <Style Selector="^:pointerover">
                 <Style Selector="^ /template/ Border#PART_Overlay">
-                    <Setter Property="Background" Value="{DynamicResource DarkOverlayBrush}" />
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
                 </Style>
             </Style>
             <!-- Pressed State -->
             <Style Selector="^:pressed">
                 <Style Selector="^ /template/ Border#PART_Overlay">
-                    <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
                 </Style>
             </Style>
             <!-- Disabled State -->
@@ -127,13 +127,13 @@
             <!-- Hover State -->
             <Style Selector="^:pointerover">
                 <Style Selector="^ /template/ Border#PART_Overlay">
-                    <Setter Property="Background" Value="{DynamicResource DarkOverlayBrush}" />
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
                 </Style>
             </Style>
             <!-- Pressed State -->
             <Style Selector="^:pressed">
                 <Style Selector="^ /template/ Border#PART_Overlay">
-                    <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
                 </Style>
             </Style>
             <!-- Disabled State -->
