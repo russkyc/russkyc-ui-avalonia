@@ -13,16 +13,15 @@
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Design.DataContext>
-
     <ScrollViewer>
         <StackPanel Spacing="24" Margin="16">
             <!-- Buttons -->
             <StackPanel Spacing="8">
                 <StackPanel Spacing="-2">
-                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="Buttons"/>
-                    <TextBlock Text="Displays a button or a component that looks like a button."/>
+                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="Buttons" />
+                    <TextBlock Text="Displays a button or a component that looks like a button." />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Spacing="7">
                     <Button Content="Primary" />
@@ -33,17 +32,32 @@
                     <Button Content="Disabled" IsEnabled="False" />
                 </StackPanel>
             </StackPanel>
+            <!-- Toggle Buttons -->
+            <StackPanel Spacing="8">
+                <StackPanel Spacing="-2">
+                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="Toggle Buttons" />
+                    <TextBlock Text="Displays a toggle button or a component that looks like a toggle button." />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="7">
+                    <ToggleButton Content="Default" />
+                    <ToggleButton Content="Default Disabled" IsEnabled="False" />
+                    <ToggleButton Classes="Primary" Content="Primary" />
+                    <ToggleButton Classes="Primary" Content="Primary Disabled" IsEnabled="False" />
+                    <ToggleButton Classes="Outline" Content="Outlined" />
+                    <ToggleButton Classes="Outline" Content="Outline Disabled" IsEnabled="False" />
+                </StackPanel>
+            </StackPanel>
             <!-- TextBox -->
             <StackPanel Spacing="8">
                 <StackPanel Spacing="-2">
-                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="TextBox"/>
-                    <TextBlock Text="Displays a textbox field or a component that looks like an input field."/>
+                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="TextBox" />
+                    <TextBlock Text="Displays a textbox field or a component that looks like an input field." />
                 </StackPanel>
                 <StackPanel Spacing="7">
                     <TextBox Watermark="Default Textbox"></TextBox>
                     <TextBox Watermark="Disabled Textbox" Text="Disabled Textbox" IsEnabled="False"></TextBox>
                     <TextBox Classes="Clearable">Clear</TextBox>
-                    <TextBox PasswordChar="●" Classes="RevealPasswordButton">Password</TextBox>
+                    <TextBox PasswordChar="●" Classes="ShowHide">Password</TextBox>
                     <TextBox Watermark="Watermark" />
                     <TextBox Watermark="Floating Watermark" UseFloatingWatermark="True">Content</TextBox>
                     <TextBox Text="Error">
@@ -53,7 +67,29 @@
                     </TextBox>
                 </StackPanel>
             </StackPanel>
+            <!-- Cards -->
+            <StackPanel Spacing="8">
+                <TextBlock FontWeight="SemiBold" FontSize="24" Text="Cards" />
+                <TextBlock Text="Displays a card panel" />
+                <Grid Margin="40">
+                    <Border Classes="Card" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Background="{DynamicResource BackgroundBrush}">
+                        <StackPanel Spacing="7">
+                            <StackPanel Margin="0,0,0,16">
+                                <TextBlock Text="Login" FontSize="24" FontWeight="Bold" />
+                                <TextBlock FontSize="16" Foreground="#3F3F3F" Text="Login or sign-up to an account" />
+                            </StackPanel>
+                            <TextBox Watermark="Username" UseFloatingWatermark="True" />
+                            <TextBox Watermark="Password" UseFloatingWatermark="True" PasswordChar="●"
+                                     Classes="ShowHide">
+                                Password
+                            </TextBox>
+                            <Button Margin="0,16,0,0" HorizontalAlignment="Stretch" Content="Login" />
+                            <Button HorizontalAlignment="Stretch" Classes="Ghost" Content="Create Account" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
-
 </Window>
