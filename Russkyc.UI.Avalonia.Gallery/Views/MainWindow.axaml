@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Russkyc.UI.Avalonia.Gallery.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Russkyc.UI.Avalonia.Gallery.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Russkyc.UI.Avalonia.Gallery">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <ScrollViewer>
+        <StackPanel Spacing="24" Margin="16">
+            <!-- Buttons -->
+            <StackPanel Spacing="8">
+                <StackPanel Spacing="-2">
+                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="Buttons"/>
+                    <TextBlock Text="Displays a button or a component that looks like a button."/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="7">
+                    <Button Content="Primary" />
+                    <Button Classes="Destructive" Content="Destructive" />
+                    <Button Classes="Outline" Content="Outline" />
+                    <Button Classes="Ghost" Content="Ghost" />
+                    <Button Classes="Link" Content="Link" />
+                    <Button Content="Disabled" IsEnabled="False" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+
+</Window>
