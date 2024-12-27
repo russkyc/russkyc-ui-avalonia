@@ -23,9 +23,10 @@ Update Resources in App.axaml
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
-            <!-- Theme Resource -->
+            <!-- Theme (Customizable) -->
             <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Themes/Zinc.axaml" />
-            <!-- Controls Resource -->
+            <!-- Base (Required) -->
+            <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Base.axaml" />
             <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls.axaml" />
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -124,10 +125,6 @@ All components use the defaults and theme provided in this template.
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>
 ```
-
-> [!NOTE]  
-> Only the `Defaults`, and `Colors` sections of the theme need to be changed.
-> The brushes use references from the `Colors` section and does not need any changes.
 
 ## License
 
