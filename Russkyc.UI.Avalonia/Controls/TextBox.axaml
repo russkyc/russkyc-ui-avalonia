@@ -8,7 +8,7 @@
                 <TextBox Watermark="Default Textbox"></TextBox>
                 <TextBox Watermark="Disabled Textbox" Text="Disabled Textbox" IsEnabled="False"></TextBox>
                 <TextBox Classes="Clearable">Clear</TextBox>
-                <TextBox PasswordChar="●" Classes="RevealPasswordButton">Password</TextBox>
+                <TextBox PasswordChar="●" Classes="ShowHide">Password</TextBox>
                 <TextBox Watermark="Watermark" />
                 <TextBox Watermark="Floating Watermark" UseFloatingWatermark="True">Content</TextBox>
                 <TextBox Text="Error">
@@ -218,7 +218,7 @@
             <Setter Property="IsVisible" Value="True" />
         </Style>
         <!-- Show Password State -->
-        <Style Selector="^.RevealPasswordButton[AcceptsReturn=False][IsReadOnly=False]:not(TextBox:empty)">
+        <Style Selector="^.ShowHide[AcceptsReturn=False][IsReadOnly=False]:not(TextBox:empty)">
             <Setter Property="InnerRightContent">
                 <Template>
                     <ToggleButton
