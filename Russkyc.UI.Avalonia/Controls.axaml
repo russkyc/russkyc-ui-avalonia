@@ -10,5 +10,6 @@
             </ControlTheme>
         </ResourceDictionary>
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Button.axaml" />
+        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/TextBox.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

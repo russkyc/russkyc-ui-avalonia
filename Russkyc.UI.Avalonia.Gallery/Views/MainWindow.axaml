@@ -3,6 +3,7 @@
         xmlns:vm="using:Russkyc.UI.Avalonia.Gallery.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:system="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Russkyc.UI.Avalonia.Gallery.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -30,6 +31,26 @@
                     <Button Classes="Ghost" Content="Ghost" />
                     <Button Classes="Link" Content="Link" />
                     <Button Content="Disabled" IsEnabled="False" />
+                </StackPanel>
+            </StackPanel>
+            <!-- TextBox -->
+            <StackPanel Spacing="8">
+                <StackPanel Spacing="-2">
+                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="TextBox"/>
+                    <TextBlock Text="Displays a textbox field or a component that looks like an input field."/>
+                </StackPanel>
+                <StackPanel Spacing="7">
+                    <TextBox Watermark="Default Textbox"></TextBox>
+                    <TextBox Watermark="Disabled Textbox" Text="Disabled Textbox" IsEnabled="False"></TextBox>
+                    <TextBox Classes="Clearable">Clear</TextBox>
+                    <TextBox PasswordChar="●" Classes="RevealPasswordButton">Password</TextBox>
+                    <TextBox Watermark="Watermark" />
+                    <TextBox Watermark="Floating Watermark" UseFloatingWatermark="True">Content</TextBox>
+                    <TextBox Text="Error">
+                        <DataValidationErrors.Error>
+                            <system:Exception />
+                        </DataValidationErrors.Error>
+                    </TextBox>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
