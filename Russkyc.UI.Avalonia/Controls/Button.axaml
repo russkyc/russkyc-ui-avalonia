@@ -67,9 +67,9 @@
         <!-- Disabled State -->
         <Style Selector="^:disabled">
             <Style Selector="^ /template/ Border#PART_ButtonRoot">
-                <Setter Property="Background" Value="{DynamicResource Muted}" />
+                <Setter Property="Background" Value="{DynamicResource MutedBrush}" />
             </Style>
-            <Setter Property="Foreground" Value="{DynamicResource MutedForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource MutedForegroundBrush}" />
         </Style>
         <!-- Destructive Variant -->
         <Style Selector="^.Destructive">
