@@ -27,6 +27,7 @@
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="MinHeight" Value="36"/>
         <!-- Control Template -->
         <Setter Property="Template">
             <ControlTemplate>
@@ -43,9 +44,9 @@
                         CornerRadius="{TemplateBinding CornerRadius}" />
                     <ContentPresenter
                         x:Name="PART_ContentPresenter"
+                        Margin="{TemplateBinding Padding}"
                         Content="{TemplateBinding Content}"
                         ContentTemplate="{TemplateBinding ContentTemplate}"
-                        Margin="{TemplateBinding Padding}"
                         RecognizesAccessKey="True"
                         HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                         VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
