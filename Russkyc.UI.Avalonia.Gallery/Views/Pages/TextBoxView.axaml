@@ -1,0 +1,61 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.TextBoxView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="TextBox" />
+            <TextBlock Text="Displays a textbox or a component that looks like an input." />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="TextBox Variants Preview" />
+            <Border Classes="Card">
+                <StackPanel
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+                    <TextBox Watermark="Default Textbox" />
+                    <TextBox
+                        IsEnabled="False"
+                        Text="Disabled Textbox"
+                        Watermark="Disabled Textbox" />
+                    <TextBox Classes="Clearable">Clear</TextBox>
+                    <TextBox Classes="ShowHide" PasswordChar="●">Password</TextBox>
+                    <TextBox Watermark="Watermark" />
+                    <TextBox UseFloatingWatermark="True" Watermark="Floating Watermark">Content</TextBox>
+                    <TextBox Text="Error">
+                        <DataValidationErrors.Error>
+                            <system:Exception />
+                        </DataValidationErrors.Error>
+                    </TextBox>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Code" />
+            <ThemeVariantScope RequestedThemeVariant="Dark">
+                <TextBox
+                    Name="CodeBlock"
+                    Padding="12"
+                    CornerRadius="12"
+                    FontSize="16"
+                    IsReadOnly="True" />
+            </ThemeVariantScope>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

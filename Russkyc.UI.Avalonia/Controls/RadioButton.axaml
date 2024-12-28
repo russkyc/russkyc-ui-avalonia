@@ -1,0 +1,210 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Design Preview -->
+    <Design.PreviewWith>
+        <Border Padding="20" Background="{DynamicResource BackgroundBrush}">
+            <StackPanel Orientation="Horizontal" Spacing="7">
+                <RadioButton Classes="Toggle"
+                             Content="Toggle Default" />
+                <RadioButton Classes="Toggle"
+                             Content="Toggle Default Disabled"
+                             IsEnabled="False" />
+                <RadioButton Classes="Toggle Primary"
+                             Content="Toggle Primary" />
+                <RadioButton Classes="Toggle Primary"
+                             Content="Toggle Primary Disabled"
+                             IsEnabled="False" />
+                <RadioButton Classes="Toggle Outline"
+                             Content="Toggle Outlined" />
+                <RadioButton Classes="Toggle Outline"
+                             Content="Toggle Outline Disabled"
+                             IsEnabled="False" />
+                <RadioButton Classes="Toggle PrimaryOutline"
+                             Content="Toggle Primary Outlined" />
+                <RadioButton Classes="Toggle PrimaryOutline"
+                             Content="Toggle Primary Outlined Disabled"
+                             IsEnabled="False" />
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+    <!-- Theme -->
+    <ControlTheme x:Key="{x:Type RadioButton}" TargetType="RadioButton">
+        <Style Selector="^.Toggle">
+            <!-- Base -->
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="CornerRadius" Value="{DynamicResource Radius}" />
+            <Setter Property="Padding" Value="{DynamicResource Padding}" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="MinHeight" Value="36" />
+            <!-- Control Template -->
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid x:Name="PART_Container">
+                        <Border
+                            x:Name="PART_ButtonRoot"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}" />
+                        <Border
+                            x:Name="PART_Overlay"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}" />
+                        <ContentPresenter
+                            x:Name="PART_ContentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            RecognizesAccessKey="True"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+            <!-- Hover State -->
+            <Style Selector="^:pointerover">
+                <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
+                </Style>
+            </Style>
+            <!-- Pressed State -->
+            <Style Selector="^:pressed">
+                <Style Selector="^ /template/ Border#PART_Overlay">
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
+                </Style>
+            </Style>
+            <!-- Checked State -->
+            <Style Selector="^:checked">
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+                <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
+                </Style>
+                <Style Selector="^:pressed">
+                    <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                        <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
+                    </Style>
+                </Style>
+            </Style>
+            <!-- Disabled State -->
+            <Style Selector="^:disabled">
+                <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+                <Setter Property="Foreground" Value="{DynamicResource MutedForegroundBrush}" />
+            </Style>
+            <!-- Outline Variant -->
+            <Style Selector="^.Outline">
+                <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+                <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
+                <!-- Hover State -->
+                <Style Selector="^:pointerover">
+                    <Style Selector="^ /template/ Border#PART_Overlay">
+                        <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
+                    </Style>
+                </Style>
+                <!-- Pressed State -->
+                <Style Selector="^:pressed">
+                    <Style Selector="^ /template/ Border#PART_Overlay">
+                        <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                    </Style>
+                </Style>
+                <!-- Checked State -->
+                <Style Selector="^:checked">
+                    <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+                    <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                        <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                    </Style>
+                    <Style Selector="^:pressed">
+                        <Style Selector="^ /template/ Border#PART_Overlay">
+                            <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
+                        </Style>
+                    </Style>
+                </Style>
+                <!-- Disabled State -->
+                <Style Selector="^:disabled">
+                    <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                        <Setter Property="Background" Value="Transparent" />
+                    </Style>
+                    <Setter Property="Foreground" Value="{DynamicResource MutedForeground}" />
+                </Style>
+            </Style>
+            <!-- Primary Variant -->
+            <Style Selector="^.Primary">
+                <!-- Hover State -->
+                <Style Selector="^:pointerover">
+                    <Style Selector="^ /template/ Border#PART_Overlay">
+                        <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
+                    </Style>
+                </Style>
+                <!-- Pressed State -->
+                <Style Selector="^:pressed">
+                    <Style Selector="^ /template/ Border#PART_Overlay">
+                        <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                    </Style>
+                </Style>
+                <!-- Checked State -->
+                <Style Selector="^:checked">
+                    <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
+                    <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                        <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+                    </Style>
+                    <Style Selector="^:pressed">
+                        <Style Selector="^ /template/ Border#PART_Overlay">
+                            <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
+                        </Style>
+                    </Style>
+                </Style>
+                <!-- Disabled State -->
+                <Style Selector="^:disabled">
+                    <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                        <Setter Property="Background" Value="Transparent" />
+                    </Style>
+                    <Setter Property="Foreground" Value="{DynamicResource MutedForeground}" />
+                </Style>
+            </Style>
+            <!-- PrimaryOutline Variant -->
+            <Style Selector="^.PrimaryOutline">
+                <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+                <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
+                <!-- Hover State -->
+                <Style Selector="^:pointerover">
+                    <Style Selector="^ /template/ Border#PART_Overlay">
+                        <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
+                    </Style>
+                </Style>
+                <!-- Pressed State -->
+                <Style Selector="^:pressed">
+                    <Style Selector="^ /template/ Border#PART_Overlay">
+                        <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                    </Style>
+                </Style>
+                <!-- Checked State -->
+                <Style Selector="^:checked">
+                    <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
+                    <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                        <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+                    </Style>
+                    <Style Selector="^:pressed">
+                        <Style Selector="^ /template/ Border#PART_Overlay">
+                            <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
+                        </Style>
+                    </Style>
+                </Style>
+                <!-- Disabled State -->
+                <Style Selector="^:disabled">
+                    <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                        <Setter Property="Background" Value="Transparent" />
+                    </Style>
+                    <Setter Property="Foreground" Value="{DynamicResource MutedForeground}" />
+                </Style>
+            </Style>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

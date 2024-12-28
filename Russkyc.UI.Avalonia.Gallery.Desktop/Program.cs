@@ -1,7 +1,7 @@
-﻿using Avalonia;
-using System;
+﻿using System;
+using Avalonia;
 
-namespace Russkyc.UI.Avalonia.Gallery;
+namespace Russkyc.UI.Avalonia.Gallery.Desktop;
 
 sealed class Program
 {

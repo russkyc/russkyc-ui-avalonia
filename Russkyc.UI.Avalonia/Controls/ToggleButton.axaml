@@ -50,32 +50,32 @@
                         Content="{TemplateBinding Content}"
                         ContentTemplate="{TemplateBinding ContentTemplate}"
                         RecognizesAccessKey="True"
-                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                 </Grid>
             </ControlTemplate>
         </Setter>
         <!-- Hover State -->
         <Style Selector="^:pointerover">
-            <Style Selector="^ /template/ Border#PART_Overlay">
+            <Style Selector="^ /template/ Border#PART_ButtonRoot">
                 <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
             </Style>
         </Style>
         <!-- Pressed State -->
         <Style Selector="^:pressed">
             <Style Selector="^ /template/ Border#PART_Overlay">
-                <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
             </Style>
         </Style>
         <!-- Checked State -->
         <Style Selector="^:checked">
             <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
             <Style Selector="^ /template/ Border#PART_ButtonRoot">
-                <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
             </Style>
             <Style Selector="^:pressed">
-                <Style Selector="^ /template/ Border#PART_Overlay">
-                    <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
+                <Style Selector="^ /template/ Border#PART_ButtonRoot">
+                    <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
                 </Style>
             </Style>
         </Style>

@@ -1,12 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Russkyc.UI.Avalonia", "Russkyc.UI.Avalonia\Russkyc.UI.Avalonia.csproj", "{444411D9-C62F-4AC1-A163-0C21DD15DC2B}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Russkyc.UI.Avalonia.Gallery", "Russkyc.UI.Avalonia.Gallery\Russkyc.UI.Avalonia.Gallery.csproj", "{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A9C272C2-919D-47ED-B70E-6AA42D3E7BF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Russkyc.UI.Avalonia.Gallery.Desktop", "Russkyc.UI.Avalonia.Gallery.Desktop\Russkyc.UI.Avalonia.Gallery.Desktop.csproj", "{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{84F476DE-EED0-4D16-808E-86B8795DD888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Russkyc.UI.Avalonia.Gallery.Browser", "Russkyc.UI.Avalonia.Gallery.Browser\Russkyc.UI.Avalonia.Gallery.Browser.csproj", "{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Russkyc.UI.Avalonia.Gallery", "Russkyc.UI.Avalonia.Gallery\Russkyc.UI.Avalonia.Gallery.csproj", "{DAB914CE-90DE-4B3B-82A0-B9EBBD7E9970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Russkyc.UI.Avalonia.Gallery.iOS", "Russkyc.UI.Avalonia.Gallery.iOS\Russkyc.UI.Avalonia.Gallery.iOS.csproj", "{EBD9022F-BC83-4846-9A11-6F7F3772DC64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Russkyc.UI.Avalonia.Gallery.Android", "Russkyc.UI.Avalonia.Gallery.Android\Russkyc.UI.Avalonia.Gallery.Android.csproj", "{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DA99C4E-89E3-4049-9C22-0A7EC60D83D8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A11E2AAA-246A-421E-8A0F-5484AECF5F88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{721F96A6-B4BF-4933-85EB-F1C459E9C5B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Russkyc.UI.Avalonia", "Russkyc.UI.Avalonia\Russkyc.UI.Avalonia.csproj", "{6924356A-6B47-4884-8E47-38806D23BB16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,17 +30,43 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{444411D9-C62F-4AC1-A163-0C21DD15DC2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{444411D9-C62F-4AC1-A163-0C21DD15DC2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{444411D9-C62F-4AC1-A163-0C21DD15DC2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{444411D9-C62F-4AC1-A163-0C21DD15DC2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DAB914CE-90DE-4B3B-82A0-B9EBBD7E9970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAB914CE-90DE-4B3B-82A0-B9EBBD7E9970}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAB914CE-90DE-4B3B-82A0-B9EBBD7E9970}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAB914CE-90DE-4B3B-82A0-B9EBBD7E9970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6924356A-6B47-4884-8E47-38806D23BB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6924356A-6B47-4884-8E47-38806D23BB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6924356A-6B47-4884-8E47-38806D23BB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6924356A-6B47-4884-8E47-38806D23BB16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83CB65B8-011F-4ED7-BCD3-A6CFA935EF7E}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{444411D9-C62F-4AC1-A163-0C21DD15DC2B} = {A9C272C2-919D-47ED-B70E-6AA42D3E7BF3}
-		{DAB914CE-90DE-4B3B-82A0-B9EBBD7E9970} = {84F476DE-EED0-4D16-808E-86B8795DD888}
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568} = {721F96A6-B4BF-4933-85EB-F1C459E9C5B6}
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E} = {721F96A6-B4BF-4933-85EB-F1C459E9C5B6}
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA} = {721F96A6-B4BF-4933-85EB-F1C459E9C5B6}
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C} = {721F96A6-B4BF-4933-85EB-F1C459E9C5B6}
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64} = {721F96A6-B4BF-4933-85EB-F1C459E9C5B6}
+		{6924356A-6B47-4884-8E47-38806D23BB16} = {A11E2AAA-246A-421E-8A0F-5484AECF5F88}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,74 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.CardView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="Card" />
+            <TextBlock Text="Displays a simple card panel." />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Authentication Card Sample" />
+            <Border Classes="Card">
+                <Border
+                    Width="350"
+                    Margin="20"
+                    VerticalAlignment="Center"
+                    Background="{DynamicResource BackgroundBrush}"
+                    Classes="Card">
+                    <StackPanel Spacing="7">
+                        <StackPanel Margin="0,0,0,16">
+                            <TextBlock
+                                FontSize="24"
+                                FontWeight="Bold"
+                                Text="Login" />
+                            <TextBlock
+                                FontSize="16"
+                                Foreground="#3F3F3F"
+                                Text="Login or create an account" />
+                        </StackPanel>
+                        <TextBox Watermark="Username" />
+                        <TextBox
+                            Classes="ShowHide"
+                            PasswordChar="●"
+                            Watermark="Password">
+                            Password
+                        </TextBox>
+                        <Button
+                            Margin="0,16,0,0"
+                            HorizontalAlignment="Stretch"
+                            Content="Login" />
+                        <Button
+                            HorizontalAlignment="Stretch"
+                            Classes="Ghost"
+                            Content="Create Account" />
+                    </StackPanel>
+                </Border>
+            </Border>
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Code" />
+            <ThemeVariantScope RequestedThemeVariant="Dark">
+                <TextBox
+                    Name="CodeBlock"
+                    Padding="12"
+                    CornerRadius="12"
+                    FontSize="16"
+                    IsReadOnly="True" />
+            </ThemeVariantScope>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

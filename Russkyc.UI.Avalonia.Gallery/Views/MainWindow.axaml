@@ -1,95 +1,17 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:Russkyc.UI.Avalonia.Gallery.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:system="clr-namespace:System;assembly=System.Runtime"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Russkyc.UI.Avalonia.Gallery.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="Russkyc.UI.Avalonia.Gallery">
-
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel />
-    </Design.DataContext>
-    <ScrollViewer>
-        <StackPanel Spacing="24" Margin="16">
-            <!-- Buttons -->
-            <StackPanel Spacing="8">
-                <StackPanel Spacing="-2">
-                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="Buttons" />
-                    <TextBlock Text="Displays a button or a component that looks like a button." />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Spacing="7">
-                    <Button Content="Primary" />
-                    <Button Classes="Destructive" Content="Destructive" />
-                    <Button Classes="Outline" Content="Outline" />
-                    <Button Classes="Ghost" Content="Ghost" />
-                    <Button Classes="Link" Content="Link" />
-                    <Button Content="Disabled" IsEnabled="False" />
-                </StackPanel>
-            </StackPanel>
-            <!-- Toggle Buttons -->
-            <StackPanel Spacing="8">
-                <StackPanel Spacing="-2">
-                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="Toggle Buttons" />
-                    <TextBlock Text="Displays a toggle button or a component that looks like a toggle button." />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Spacing="7">
-                    <ToggleButton Content="Default" />
-                    <ToggleButton Content="Default Disabled" IsEnabled="False" />
-                    <ToggleButton Classes="Primary" Content="Primary" />
-                    <ToggleButton Classes="Primary" Content="Primary Disabled" IsEnabled="False" />
-                    <ToggleButton Classes="Outline" Content="Outlined" />
-                    <ToggleButton Classes="Outline" Content="Outline Disabled" IsEnabled="False" />
-                </StackPanel>
-            </StackPanel>
-            <!-- TextBox -->
-            <StackPanel Spacing="8">
-                <StackPanel Spacing="-2">
-                    <TextBlock FontWeight="SemiBold" FontSize="24" Text="TextBox" />
-                    <TextBlock Text="Displays a textbox field or a component that looks like an input field." />
-                </StackPanel>
-                <StackPanel Spacing="7">
-                    <TextBox Watermark="Default Textbox"></TextBox>
-                    <TextBox Watermark="Disabled Textbox" Text="Disabled Textbox" IsEnabled="False"></TextBox>
-                    <TextBox Classes="Clearable">Clear</TextBox>
-                    <TextBox PasswordChar="●" Classes="ShowHide">Password</TextBox>
-                    <TextBox Watermark="Watermark" />
-                    <TextBox Watermark="Floating Watermark" UseFloatingWatermark="True">Content</TextBox>
-                    <TextBox Text="Error">
-                        <DataValidationErrors.Error>
-                            <system:Exception />
-                        </DataValidationErrors.Error>
-                    </TextBox>
-                </StackPanel>
-            </StackPanel>
-            <!-- Cards -->
-            <StackPanel Spacing="8">
-                <TextBlock FontWeight="SemiBold" FontSize="24" Text="Cards" />
-                <TextBlock Text="Displays a card panel" />
-                <Grid Margin="40">
-                    <Border Classes="Card" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"
-                            Background="{DynamicResource BackgroundBrush}">
-                        <StackPanel Spacing="7">
-                            <StackPanel Margin="0,0,0,16">
-                                <TextBlock Text="Login" FontSize="24" FontWeight="Bold" />
-                                <TextBlock FontSize="16" Foreground="#3F3F3F" Text="Login or sign-up to an account" />
-                            </StackPanel>
-                            <TextBox Watermark="Username" UseFloatingWatermark="True" />
-                            <TextBox Watermark="Password" UseFloatingWatermark="True" PasswordChar="●"
-                                     Classes="ShowHide">
-                                Password
-                            </TextBox>
-                            <Button Margin="0,16,0,0" HorizontalAlignment="Stretch" Content="Login" />
-                            <Button HorizontalAlignment="Stretch" Classes="Ghost" Content="Create Account" />
-                        </StackPanel>
-                    </Border>
-                </Grid>
-            </StackPanel>
-        </StackPanel>
-    </ScrollViewer>
+<Window
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Russkyc.UI.Avalonia.Gallery.Views"
+    Title="Russkyc.UI.Avalonia Gallery"
+    Width="900"
+    Height="500"
+    MinWidth="750"
+    MinHeight="420"
+    Icon="/Assets/avalonia-logo.ico"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <views:MainView />
 </Window>
