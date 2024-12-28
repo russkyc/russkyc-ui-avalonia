@@ -1,0 +1,33 @@
+﻿name: Deploy Blazor WASM to GitHub Pages
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
+jobs:
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0
+
+      - name: Restore packages
+        run: dotnet restore
+
+      - name: Publish .NET Core Project
+        run: dotnet publish Russkyc.UI.Avalonia.Gallery.Browser/Russkyc.UI.Avalonia.Gallery.Browser.csproj -c Release -o browser-publish
+
+      - name: Commit wwwroot to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: browser-publish/wwwroot
