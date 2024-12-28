@@ -31,20 +31,20 @@ jobs:
         run: dotnet restore
 
       - name: Publish .NET Core Project
-        run: dotnet publish $PROJECT_PATH -c Release -o browser-publish
+        run: dotnet publish $PROJECT_PATH -c Release -o $OUTPUT_PATH
 
       - name: Change base-tag in index.html
         run: sed -i 's/<base href="\/" \/>/<base href="\/Russkyc.UI.Avalonia.Gallery.Browser\/" \/>/g' $OUTPUT_PATH/wwwroot/index.html
 
-      - name: copy index.html to 404.html
+      - name: Copy index.html to 404.html
         run: cp $OUTPUT_PATH/wwwroot/index.html $OUTPUT_PATH/wwwroot/404.html
 
       - name: Add .nojekyll file
         run: touch $OUTPUT_PATH/wwwroot/.nojekyll
 
       - name: Commit wwwroot to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: browser-publish/wwwroot
+          FOLDER: ${{ env.OUTPUT_PATH }}/wwwroot
