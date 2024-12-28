@@ -11,6 +11,10 @@
         <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+
     <ItemGroup>
         <AndroidResource Include="Icon.png">
             <Link>Resources\drawable\Icon.png</Link>
