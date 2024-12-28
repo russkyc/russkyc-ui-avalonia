@@ -20,7 +20,7 @@ public partial class CardView : UserControl
                                      <TextBlock FontSize="16" Foreground="#3F3F3F" Text="Login or sign-up to an account"/>
                                  </StackPanel>
                                  <TextBox Watermark="Username"/>
-                                 <TextBox Watermark="Password" PasswordChar="●" Classes="ShowHide">Password</TextBox>
+                                 <TextBox Watermark="Password" PasswordChar="•" Classes="ShowHide">Password</TextBox>
                                  <Button Margin="0,16,0,0" HorizontalAlignment="Stretch" Content="Login" />
                                  <Button HorizontalAlignment="Stretch" Classes="Ghost" Content="Create Account" />
                              </StackPanel>

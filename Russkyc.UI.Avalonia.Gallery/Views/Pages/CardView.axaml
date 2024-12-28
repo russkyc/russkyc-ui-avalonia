@@ -40,7 +40,7 @@
                         <TextBox Watermark="Username" />
                         <TextBox
                             Classes="ShowHide"
-                            PasswordChar="●"
+                            PasswordChar="•"
                             Watermark="Password">
                             Password
                         </TextBox>

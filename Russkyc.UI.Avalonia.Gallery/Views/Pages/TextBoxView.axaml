@@ -32,7 +32,7 @@
                         Text="Disabled Textbox"
                         Watermark="Disabled Textbox" />
                     <TextBox Classes="Clearable">Clear</TextBox>
-                    <TextBox Classes="ShowHide" PasswordChar="●">Password</TextBox>
+                    <TextBox Classes="ShowHide" PasswordChar="•">Password</TextBox>
                     <TextBox Watermark="Watermark" />
                     <TextBox UseFloatingWatermark="True" Watermark="Floating Watermark">Content</TextBox>
                     <TextBox Text="Error">
