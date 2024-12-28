@@ -4,6 +4,7 @@
         <OutputType>Exe</OutputType>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <Nullable>enable</Nullable>
+        <GHPages>true</GHPages>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -12,6 +13,7 @@
 
     <ItemGroup>
         <PackageReference Include="Avalonia.Browser"/>
+        <PackageReference Include="PublishSPAforGitHubPages.Build" />
     </ItemGroup>
 
     <ItemGroup>
