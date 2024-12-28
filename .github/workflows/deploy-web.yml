@@ -1,4 +1,9 @@
 ﻿name: Deploy Blazor WASM to GitHub Pages
+
+env:
+  PROJECT_PATH: Russkyc.UI.Avalonia.Gallery.Browser/Russkyc.UI.Avalonia.Gallery.Browser.csproj
+  OUTPUT_PATH: browser-publish
+  
 on:
   push:
     branches: [ "master" ]
@@ -17,13 +22,25 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 8.0
+          dotnet-version: 8.0.x
+
+      - name: Install wasm-tools
+        run: dotnet workload install wasm-tools
 
       - name: Restore packages
         run: dotnet restore
 
       - name: Publish .NET Core Project
-        run: dotnet publish Russkyc.UI.Avalonia.Gallery.Browser/Russkyc.UI.Avalonia.Gallery.Browser.csproj -c Release -o browser-publish
+        run: dotnet publish $PROJECT_PATH -c Release -o browser-publish
+
+      - name: Change base-tag in index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/Russkyc.UI.Avalonia.Gallery.Browser\/" \/>/g' $OUTPUT_PATH/wwwroot/index.html
+
+      - name: copy index.html to 404.html
+        run: cp $OUTPUT_PATH/wwwroot/index.html $OUTPUT_PATH/wwwroot/404.html
+
+      - name: Add .nojekyll file
+        run: touch $OUTPUT_PATH/wwwroot/.nojekyll
 
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
