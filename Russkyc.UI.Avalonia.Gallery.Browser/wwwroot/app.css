@@ -11,6 +11,9 @@
 }
 
 @media (prefers-color-scheme: light) {
+    html, body {
+        background: white;
+    }
     .avalonia-splash {
         background: white;
         color: black;
@@ -18,8 +21,17 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    html, body {
+        background: black;
+    }
     .avalonia-splash {
         background: black;
         color: white;
     }
+}
+
+.avalonia-splash.splash-close {
+    transition: opacity 200ms, display 200ms;
+    display: none;
+    opacity: 0;
 }
