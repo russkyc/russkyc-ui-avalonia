@@ -1,0 +1,58 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.ButtonView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Russkyc.UI.Avalonia.Gallery.Views.Pages"
+    d:DesignWidth="800"
+    x:DataType="pages:ButtonView"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="Button" />
+            <TextBlock Text="Displays a button or a component that looks like a button." />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Button Variants Preview" />
+            <Border Height="200" Classes="Card">
+                <WrapPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <WrapPanel.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Margin" Value="4" />
+                        </Style>
+                    </WrapPanel.Styles>
+                    <Button Content="Primary" />
+                    <Button Classes="Destructive" Content="Destructive" />
+                    <Button Classes="Outline" Content="Outline" />
+                    <Button Classes="Ghost" Content="Ghost" />
+                    <Button Classes="Link" Content="Link" />
+                    <Button Content="Disabled" IsEnabled="False" />
+                </WrapPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Code" />
+            <ThemeVariantScope RequestedThemeVariant="Dark">
+                <TextBox
+                    Name="CodeBlock"
+                    Padding="12"
+                    CornerRadius="12"
+                    FontSize="16"
+                    IsReadOnly="True" />
+            </ThemeVariantScope>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

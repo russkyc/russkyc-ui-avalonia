@@ -5,8 +5,7 @@
         <Border Classes="Card"
                 Width="350"
                 Margin="80"
-                Background="{DynamicResource BackgroundBrush}"
-                BoxShadow="0 3 4 2 #EFEFEF">
+                Background="{DynamicResource BackgroundBrush}">
             <StackPanel Spacing="7">
                 <StackPanel Margin="0,0,0,16">
                     <TextBlock Text="Login" FontSize="24" FontWeight="Bold"/>
@@ -22,7 +21,7 @@
     <ControlTheme x:Key="{x:Type Border}" TargetType="Border">
         <Style Selector="^.Card">
             <Setter Property="Padding" Value="28"/>
-            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Background" Value="{DynamicResource Background}"/>
             <Setter Property="CornerRadius" Value="12" />
             <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
             <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
