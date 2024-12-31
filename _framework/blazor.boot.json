@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Russkyc.UI.Avalonia.Gallery.Browser",
   "resources": {
-    "hash": "sha256-0KXkMagx34oFzrJ9jSP8HM+doklUoqnr7dXsBc4NAIw=",
+    "hash": "sha256-ZV+NIACtE2KnTF+Adc8I6+KeS66RP6u37vNEjS7BKCI=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.jwxbg2sdkm.js": "sha256-InOmaVgBw3AntDnlajAioiIGnS4YpRYwqYFgBosC0PE="
     },
@@ -19,7 +19,7 @@
     "assembly": {
       "Avalonia.Base.wasm": "sha256-iGksFjfQu2sXsejrHJk6tX4j+RWSAp5g81TZqQlL6ac=",
       "Avalonia.Browser.wasm": "sha256-J5Mxgr8h1Fb26EtBQl38DxpS5B8H1qFLgqtp8WynkBo=",
-      "Avalonia.Controls.wasm": "sha256-iZN09MamLi0GflRnI6EW3WSZoAMjo2JbGhz93nYeogw=",
+      "Avalonia.Controls.wasm": "sha256-N8c4hedHWdyBzE/FNtc6QW1wkdY586waOrh7dQUzgOQ=",
       "Avalonia.DesignerSupport.wasm": "sha256-F5G3vY67Ly9DGie7DSfScEJXq8JrCY2aP94JVXWPKxU=",
       "Avalonia.Dialogs.wasm": "sha256-Jg3tsl04qrTqjXR9M+MLpHEKZP+URACHyWZP9yxZ/CQ=",
       "Avalonia.Fonts.Inter.wasm": "sha256-ug8qPEqzOaYF0GxMyJ24AXJ2JfUt9zzrkdY0Yw2AlB8=",
@@ -39,9 +39,9 @@
       "HarfBuzzSharp.wasm": "sha256-YNii5oT5Wu6rgx0u/dpWdNxBYcrrh8G9XKom3mG5WTg=",
       "MicroCom.Runtime.wasm": "sha256-dI22KS20yc+ziyg4tSUpmSjG0ebPXDL5QTSZf+ehjwI=",
       "netstandard.wasm": "sha256-0G807/izOXamlI0nIZjOYPaqWL07fMHdaPkmVRkRCtY=",
-      "Russkyc.UI.Avalonia.Gallery.Browser.wasm": "sha256-Rh6fRVfQN31kAJGMXPMqBniE4gqqEAb7YIFY1DikhKs=",
-      "Russkyc.UI.Avalonia.Gallery.wasm": "sha256-XaWoR07MeLpEQ7VZg2w+X5fqek0F0Wz+6629eHq/Fxc=",
-      "Russkyc.UI.Avalonia.wasm": "sha256-tKXV3ebhzytm7RmwW3ouHxyxNswiUHTaMalKbd5RyU8=",
+      "Russkyc.UI.Avalonia.Gallery.Browser.wasm": "sha256-itjsAhi9t93N3f4YmuO+hpiAiSWybvUCagppaNXEIPU=",
+      "Russkyc.UI.Avalonia.Gallery.wasm": "sha256-1Q0Hm6KNPlFTbmbqpnDV0bzMaEVaT4YNzl5+2s5sNNo=",
+      "Russkyc.UI.Avalonia.wasm": "sha256-ZtCctndisq6prx58ti1e9l5i8IoU3nxDqDwdp5V47Ws=",
       "ShimSkiaSharp.wasm": "sha256-6zIxMG3ie+WslxcylFjJZQXZXyO9gC0OwrGlaKVf+9U=",
       "SkiaSharp.wasm": "sha256-pAYgBfKgIP8DgtJTF51rFLysH0dA1acwPy+d79OJe7g=",
       "Svg.Custom.wasm": "sha256-8JEKS2tfP4O+bxjp2iqz5GWq0F3Zph4P+SkcRoZrbl8=",
