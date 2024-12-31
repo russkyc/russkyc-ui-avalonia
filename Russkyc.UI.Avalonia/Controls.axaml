@@ -8,11 +8,12 @@
             </ControlTheme>
         </ResourceDictionary>
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Button.axaml" />
+        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Border.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/RadioButton.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ToggleButton.axaml" />
+        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ToggleSwitch.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ScrollBar.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/TextBox.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ComboBox.axaml" />
-        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Border.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
