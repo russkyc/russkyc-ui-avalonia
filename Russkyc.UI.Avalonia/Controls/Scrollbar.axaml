@@ -1,0 +1,382 @@
+﻿<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <!--  Design Preview  -->
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <StackPanel Orientation="Horizontal" Spacing="20">
+                <StackPanel Spacing="20">
+                    <ScrollBar
+                        Width="100"
+                        VerticalAlignment="Center"
+                        AllowAutoHide="False"
+                        Orientation="Horizontal" />
+                    <ScrollBar
+                        Width="100"
+                        VerticalAlignment="Center"
+                        AllowAutoHide="False"
+                        IsEnabled="False"
+                        Orientation="Horizontal" />
+                    <ScrollBar
+                        Width="100"
+                        VerticalAlignment="Center"
+                        AllowAutoHide="True"
+                        Orientation="Horizontal" />
+                    <ScrollBar
+                        Width="100"
+                        VerticalAlignment="Center"
+                        AllowAutoHide="True"
+                        IsEnabled="False"
+                        Orientation="Horizontal" />
+                </StackPanel>
+                <ScrollBar
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    AllowAutoHide="False"
+                    Orientation="Vertical" />
+                <ScrollBar
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    AllowAutoHide="False"
+                    IsEnabled="False"
+                    Orientation="Vertical" />
+                <ScrollBar
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    AllowAutoHide="True"
+                    Orientation="Vertical" />
+                <ScrollBar
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    AllowAutoHide="True"
+                    IsEnabled="False"
+                    Orientation="Vertical" />
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+    <!--  Base  -->
+    <system:Double x:Key="ScrollbarWidth">10</system:Double>
+    <TransformOperations x:Key="VerticalSmallScrollThumbScaleTransform">scaleX(0.500)</TransformOperations>
+    <TransformOperations x:Key="HorizontalSmallScrollThumbScaleTransform">scaleY(0.500)</TransformOperations>
+    <!--  Control Theme  -->
+    <ControlTheme x:Key="ScrollBarThumb" TargetType="Thumb">
+        <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border
+                        x:Name="#PART_Thumb"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                        <Border x:Name="PART_Overlay" CornerRadius="{TemplateBinding CornerRadius}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Transitions">
+            <Transitions>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1" />
+            </Transitions>
+        </Setter>
+        <Style Selector="^:pointerover">
+            <Style Selector="^/template/ Border#PART_Overlay">
+                <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
+            </Style>
+        </Style>
+        <Style Selector="^:pressed /template/ Border#PART_Overlay">
+            <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
+        </Style>
+        <Style Selector="^:disabled  /template/ Border#PART_Thumb">
+            <Setter Property="Background" Value="{DynamicResource SurfaceOverlayBrush}" />
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="ScrollBarPageButton" TargetType="RepeatButton">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="Opacity" Value="0" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Background="{TemplateBinding Background}" />
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+
+    <ControlTheme x:Key="ScrollBarLineButton" TargetType="RepeatButton">
+        <Setter Property="Opacity" Value="0" />
+        <Setter Property="TextElement.Foreground" Value="{DynamicResource ScrollBarButtonArrowForeground}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <ContentPresenter
+                    x:Name="PART_ContentPresenter"
+                    Background="{DynamicResource ScrollBarButtonBackground}"
+                    BorderBrush="{DynamicResource ScrollBarButtonBorderBrush}"
+                    Content="{TemplateBinding Content}" />
+            </ControlTemplate>
+        </Setter>
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Property="Opacity" Duration="0:0:0.1" />
+            </Transitions>
+        </Setter>
+
+        <Style Selector="^:disabled">
+            <Setter Property="TextElement.Foreground" Value="{DynamicResource MutedForegroundBrush}" />
+            <Style Selector="^ /template/ ContentPresenter">
+                <Setter Property="BorderBrush" Value="{DynamicResource MutedForegroundBrush}" />
+            </Style>
+        </Style>
+    </ControlTheme>
+
+    <ControlTheme x:Key="{x:Type ScrollBar}" TargetType="ScrollBar">
+        <Setter Property="MinWidth" Value="{DynamicResource ScrollbarWidth}" />
+        <Setter Property="MinHeight" Value="{DynamicResource ScrollbarWidth}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Style Selector="^:vertical">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid x:Name="Root" Width="{TemplateBinding Width}">
+                        <Border
+                            x:Name="VerticalRoot"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0">
+                            <Grid RowDefinitions="Auto,*,Auto">
+                                <Rectangle
+                                    x:Name="TrackRect"
+                                    Grid.RowSpan="3"
+                                    Fill="{TemplateBinding Background}"
+                                    Opacity="0"
+                                    Stroke="{TemplateBinding BorderBrush}"
+                                    StrokeThickness="0">
+                                    <Rectangle.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition Property="Opacity" Duration="0:0:0.1" />
+                                        </Transitions>
+                                    </Rectangle.Transitions>
+                                </Rectangle>
+                                <RepeatButton
+                                    x:Name="PART_LineUpButton"
+                                    Grid.Row="0"
+                                    Height="{DynamicResource ScrollbarWidth}"
+                                    HorizontalAlignment="Stretch"
+                                    Focusable="False"
+                                    Theme="{StaticResource ScrollBarLineButton}">
+                                    <Image
+                                        Width="8"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        IsHitTestVisible="False"
+                                        UseLayoutRounding="False">
+                                        <Image.Resources>
+                                            <Pen
+                                                x:Key="IconPen"
+                                                Brush="{DynamicResource MutedForegroundBrush}"
+                                                Thickness="1.5" />
+                                        </Image.Resources>
+                                        <DrawingImage>
+                                            <DrawingGroup>
+                                                <GeometryDrawing Geometry="F1 M18 15L12 9L6 15" Pen="{DynamicResource IconPen}" />
+                                            </DrawingGroup>
+                                        </DrawingImage>
+                                    </Image>
+                                </RepeatButton>
+                                <Track
+                                    Grid.Row="1"
+                                    DeferThumbDrag="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}"
+                                    IsDirectionReversed="True"
+                                    Maximum="{TemplateBinding Maximum}"
+                                    Minimum="{TemplateBinding Minimum}"
+                                    Orientation="{TemplateBinding Orientation}"
+                                    ViewportSize="{TemplateBinding ViewportSize}"
+                                    Value="{TemplateBinding Value,
+                                                            Mode=TwoWay}">
+                                    <Track.DecreaseButton>
+                                        <RepeatButton
+                                            x:Name="PART_PageUpButton"
+                                            Focusable="False"
+                                            Theme="{StaticResource ScrollBarPageButton}" />
+                                    </Track.DecreaseButton>
+                                    <Track.IncreaseButton>
+                                        <RepeatButton
+                                            x:Name="PART_PageDownButton"
+                                            Focusable="False"
+                                            Theme="{StaticResource ScrollBarPageButton}" />
+                                    </Track.IncreaseButton>
+                                    <Thumb
+                                        Width="{DynamicResource ScrollbarWidth}"
+                                        MinHeight="{DynamicResource ScrollbarWidth}"
+                                        CornerRadius="2"
+                                        RenderTransform="{DynamicResource VerticalSmallScrollThumbScaleTransform}"
+                                        RenderTransformOrigin="100%,100%"
+                                        Theme="{StaticResource ScrollBarThumb}" />
+                                </Track>
+                                <RepeatButton
+                                    x:Name="PART_LineDownButton"
+                                    Grid.Row="2"
+                                    Height="{DynamicResource ScrollbarWidth}"
+                                    MinWidth="{DynamicResource ScrollbarWidth}"
+                                    HorizontalAlignment="Center"
+                                    Focusable="False"
+                                    Theme="{StaticResource ScrollBarLineButton}">
+                                    <Image
+                                        Width="8"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        IsHitTestVisible="False"
+                                        UseLayoutRounding="False">
+                                        <Image.Resources>
+                                            <Pen
+                                                x:Key="IconPen"
+                                                Brush="{DynamicResource MutedForegroundBrush}"
+                                                Thickness="1.5" />
+                                        </Image.Resources>
+                                        <Image.RenderTransform>
+                                            <RotateTransform Angle="180" />
+                                        </Image.RenderTransform>
+                                        <DrawingImage>
+                                            <DrawingGroup>
+                                                <GeometryDrawing Geometry="F1 M18 15L12 9L6 15" Pen="{DynamicResource IconPen}" />
+                                            </DrawingGroup>
+                                        </DrawingImage>
+                                    </Image>
+                                </RepeatButton>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+
+        <Style Selector="^:horizontal">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid x:Name="Root">
+                        <Border
+                            x:Name="HorizontalRoot"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0">
+                            <Grid ColumnDefinitions="Auto,*,Auto">
+                                <Rectangle
+                                    x:Name="TrackRect"
+                                    Grid.ColumnSpan="3"
+                                    Fill="{DynamicResource ScrollBarTrackFill}"
+                                    Opacity="0"
+                                    Stroke="{DynamicResource ScrollBarTrackStroke}"
+                                    StrokeThickness="0">
+                                    <Rectangle.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition Property="Opacity" Duration="0:0:0.1" />
+                                        </Transitions>
+                                    </Rectangle.Transitions>
+                                </Rectangle>
+                                <RepeatButton
+                                    x:Name="PART_LineUpButton"
+                                    Grid.Column="0"
+                                    Width="{DynamicResource ScrollbarWidth}"
+                                    MinHeight="{DynamicResource ScrollbarWidth}"
+                                    VerticalAlignment="Center"
+                                    Focusable="False"
+                                    Theme="{StaticResource ScrollBarLineButton}">
+                                    <Image
+                                        Height="8"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        IsHitTestVisible="False"
+                                        UseLayoutRounding="False">
+                                        <Image.Resources>
+                                            <Pen
+                                                x:Key="IconPen"
+                                                Brush="{DynamicResource MutedForegroundBrush}"
+                                                Thickness="1.5" />
+                                        </Image.Resources>
+                                        <DrawingImage>
+                                            <DrawingGroup>
+                                                <GeometryDrawing Geometry="F1 M15 18L9 12L15 6" Pen="{DynamicResource IconPen}" />
+                                            </DrawingGroup>
+                                        </DrawingImage>
+                                    </Image>
+                                </RepeatButton>
+                                <Track
+                                    Grid.Column="1"
+                                    DeferThumbDrag="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}"
+                                    Maximum="{TemplateBinding Maximum}"
+                                    Minimum="{TemplateBinding Minimum}"
+                                    Orientation="{TemplateBinding Orientation}"
+                                    ViewportSize="{TemplateBinding ViewportSize}"
+                                    Value="{TemplateBinding Value,
+                                                            Mode=TwoWay}">
+                                    <Track.DecreaseButton>
+                                        <RepeatButton
+                                            Name="PART_PageUpButton"
+                                            Focusable="False"
+                                            Theme="{StaticResource ScrollBarPageButton}" />
+                                    </Track.DecreaseButton>
+                                    <Track.IncreaseButton>
+                                        <RepeatButton
+                                            x:Name="PART_PageDownButton"
+                                            Focusable="False"
+                                            Theme="{StaticResource ScrollBarPageButton}" />
+                                    </Track.IncreaseButton>
+                                    <Thumb
+                                        Height="{DynamicResource ScrollbarWidth}"
+                                        MinWidth="{DynamicResource ScrollbarWidth}"
+                                        CornerRadius="2"
+                                        RenderTransform="{DynamicResource HorizontalSmallScrollThumbScaleTransform}"
+                                        RenderTransformOrigin="100%,100%"
+                                        Theme="{StaticResource ScrollBarThumb}" />
+                                </Track>
+                                <RepeatButton
+                                    x:Name="PART_LineDownButton"
+                                    Grid.Column="2"
+                                    Width="{DynamicResource ScrollbarWidth}"
+                                    MinHeight="{DynamicResource ScrollbarWidth}"
+                                    VerticalAlignment="Center"
+                                    Focusable="False"
+                                    Theme="{StaticResource ScrollBarLineButton}">
+                                    <Image
+                                        Height="8"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        IsHitTestVisible="False"
+                                        UseLayoutRounding="False">
+                                        <Image.Resources>
+                                            <Pen
+                                                x:Key="IconPen"
+                                                Brush="{DynamicResource MutedForegroundBrush}"
+                                                Thickness="1.5" />
+                                        </Image.Resources>
+                                        <Image.RenderTransform>
+                                            <RotateTransform Angle="180" />
+                                        </Image.RenderTransform>
+                                        <DrawingImage>
+                                            <DrawingGroup>
+                                                <GeometryDrawing Geometry="F1 M15 18L9 12L15 6" Pen="{DynamicResource IconPen}" />
+                                            </DrawingGroup>
+                                        </DrawingImage>
+                                    </Image>
+                                </RepeatButton>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+        <!--  Expanded State  -->
+        <Style Selector="^[IsExpanded=true]">
+            <Style Selector="^ /template/ Thumb">
+                <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
+                <Setter Property="RenderTransform" Value="none" />
+                <Setter Property="CornerRadius" Value="12" />
+            </Style>
+            <Style Selector="^ /template/ RepeatButton">
+                <Setter Property="Opacity" Value="1" />
+            </Style>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

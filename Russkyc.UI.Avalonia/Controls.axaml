@@ -1,5 +1,4 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!--  Add Resources Here  -->
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary>
             <ControlTheme x:Key="{x:Type Window}" TargetType="Window">
@@ -11,6 +10,7 @@
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Button.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/RadioButton.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ToggleButton.axaml" />
+        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ScrollBar.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/TextBox.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ComboBox.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Border.axaml" />
