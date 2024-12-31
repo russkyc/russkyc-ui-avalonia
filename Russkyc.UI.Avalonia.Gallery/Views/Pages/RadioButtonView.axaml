@@ -1,0 +1,68 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.RadioButtonView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="RadioButton" />
+            <TextBlock Text="Displays a radio toggle or a radio toggle that looks like a button" />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="RadioButton Variants Preview" />
+            <Border Height="200" Classes="Card">
+                <WrapPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <WrapPanel.Styles>
+                        <Style Selector="RadioButton">
+                            <Setter Property="Margin" Value="4" />
+                        </Style>
+                    </WrapPanel.Styles>
+                    <RadioButton VerticalAlignment="Center" Content="Default" />
+                    <RadioButton
+                        VerticalAlignment="Center"
+                        Content="Default Disabled"
+                        IsEnabled="False" />
+                    <RadioButton
+                        VerticalAlignment="Center"
+                        Classes="Toggle"
+                        Content="Toggle" />
+                    <RadioButton
+                        VerticalAlignment="Center"
+                        Classes="Toggle Primary"
+                        Content="Toggle Primary" />
+                    <RadioButton
+                        VerticalAlignment="Center"
+                        Classes="Toggle"
+                        Content="Toggle Disabled"
+                        IsEnabled="False" />
+                </WrapPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Code" />
+            <ThemeVariantScope RequestedThemeVariant="Dark">
+                <TextBox
+                    Name="CodeBlock"
+                    Padding="12"
+                    CornerRadius="12"
+                    FontSize="16"
+                    IsReadOnly="True" />
+            </ThemeVariantScope>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

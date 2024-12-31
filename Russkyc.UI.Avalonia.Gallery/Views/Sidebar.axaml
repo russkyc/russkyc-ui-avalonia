@@ -26,7 +26,7 @@
         <RadioButton
             Classes="Toggle Navigation"
             Command="{Binding OpenPageCommand}"
-            Content="Toggle Button">
+            Content="ToggleButton">
             <RadioButton.CommandParameter>
                 <x:Int32>1</x:Int32>
             </RadioButton.CommandParameter>
@@ -34,7 +34,7 @@
         <RadioButton
             Classes="Toggle Navigation"
             Command="{Binding OpenPageCommand}"
-            Content="Textbox">
+            Content="RadioButton">
             <RadioButton.CommandParameter>
                 <x:Int32>2</x:Int32>
             </RadioButton.CommandParameter>
@@ -42,7 +42,7 @@
         <RadioButton
             Classes="Toggle Navigation"
             Command="{Binding OpenPageCommand}"
-            Content="ComboBox">
+            Content="Textbox">
             <RadioButton.CommandParameter>
                 <x:Int32>3</x:Int32>
             </RadioButton.CommandParameter>
@@ -50,9 +50,17 @@
         <RadioButton
             Classes="Toggle Navigation"
             Command="{Binding OpenPageCommand}"
-            Content="Card">
+            Content="ComboBox">
             <RadioButton.CommandParameter>
                 <x:Int32>4</x:Int32>
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            Content="Card">
+            <RadioButton.CommandParameter>
+                <x:Int32>5</x:Int32>
             </RadioButton.CommandParameter>
         </RadioButton>
     </StackPanel>

@@ -20,6 +20,7 @@ public partial class MainViewModel : ViewModelBase
         _pages = [
             new ButtonView(),
             new ToggleButtonView(),
+            new RadioButtonView(),
             new TextBoxView(),
             new ComboBoxView(),
             new CardView()

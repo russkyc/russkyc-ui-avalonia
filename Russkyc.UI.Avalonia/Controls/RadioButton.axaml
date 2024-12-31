@@ -2,32 +2,177 @@
     <!--  Design Preview  -->
     <Design.PreviewWith>
         <Border Padding="20" Background="{DynamicResource BackgroundBrush}">
-            <StackPanel Orientation="Horizontal" Spacing="7">
-                <RadioButton Classes="Toggle" Content="Toggle Default" />
-                <RadioButton
-                    Classes="Toggle"
-                    Content="Toggle Default Disabled"
-                    IsEnabled="False" />
-                <RadioButton Classes="Toggle Primary" Content="Toggle Primary" />
-                <RadioButton
-                    Classes="Toggle Primary"
-                    Content="Toggle Primary Disabled"
-                    IsEnabled="False" />
-                <RadioButton Classes="Toggle Outline" Content="Toggle Outlined" />
-                <RadioButton
-                    Classes="Toggle Outline"
-                    Content="Toggle Outline Disabled"
-                    IsEnabled="False" />
-                <RadioButton Classes="Toggle PrimaryOutline" Content="Toggle Primary Outlined" />
-                <RadioButton
-                    Classes="Toggle PrimaryOutline"
-                    Content="Toggle Primary Outlined Disabled"
-                    IsEnabled="False" />
+            <StackPanel Spacing="12">
+                <StackPanel Orientation="Horizontal" Spacing="7">
+                    <RadioButton Classes="Toggle" Content="Toggle Default" />
+                    <RadioButton
+                        Classes="Toggle"
+                        Content="Toggle Default Disabled"
+                        IsEnabled="False" />
+                    <RadioButton Classes="Toggle Primary" Content="Toggle Primary" />
+                    <RadioButton
+                        Classes="Toggle Primary"
+                        Content="Toggle Primary Disabled"
+                        IsEnabled="False" />
+                    <RadioButton Classes="Toggle Outline" Content="Toggle Outlined" />
+                    <RadioButton
+                        Classes="Toggle Outline"
+                        Content="Toggle Outline Disabled"
+                        IsEnabled="False" />
+                    <RadioButton Classes="Toggle PrimaryOutline" Content="Toggle Primary Outlined" />
+                    <RadioButton
+                        Classes="Toggle PrimaryOutline"
+                        Content="Toggle Primary Outlined Disabled"
+                        IsEnabled="False" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="7">
+                    <RadioButton Content="Radio Default" GroupName="Radio" />
+                    <RadioButton
+                        Content="Radio Default"
+                        GroupName="Radio"
+                        IsEnabled="False" />
+                    <RadioButton Content="Radio Default" GroupName="Radio" />
+                </StackPanel>
             </StackPanel>
         </Border>
     </Design.PreviewWith>
+
     <!--  Theme  -->
     <ControlTheme x:Key="{x:Type RadioButton}" TargetType="RadioButton">
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Radius}" />
+        <Setter Property="Padding" Value="{DynamicResource Padding}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <ControlTemplate TargetType="RadioButton">
+                <Border
+                    x:Name="RootBorder"
+                    Background="Transparent"
+                    BorderThickness="0">
+                    <Grid ColumnDefinitions="20,*">
+                        <Grid
+                            Height="32"
+                            VerticalAlignment="Top"
+                            Column="0">
+                            <Ellipse
+                                x:Name="OuterEllipse"
+                                Width="20"
+                                Height="20"
+                                Fill="{DynamicResource BackgroundBrush}"
+                                Stroke="{DynamicResource BorderBrush}"
+                                StrokeThickness="1"
+                                UseLayoutRounding="False" />
+                            <Ellipse
+                                x:Name="CheckOuterEllipse"
+                                Width="20"
+                                Height="20"
+                                Fill="{DynamicResource PrimaryBrush}"
+                                Opacity="0"
+                                Stroke="{DynamicResource BorderBrush}"
+                                StrokeThickness="1"
+                                UseLayoutRounding="False" />
+                            <Ellipse
+                                x:Name="CheckGlyph"
+                                Width="7"
+                                Height="7"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Fill="{DynamicResource BackgroundBrush}"
+                                Opacity="0"
+                                Stroke="{DynamicResource BorderBrush}"
+                                UseLayoutRounding="False">
+                                <Ellipse.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition Property="Opacity" Duration="0:0:0.1" />
+                                        <DoubleTransition Property="Width" Duration="0:0:0.15">
+                                            <DoubleTransition.Easing>
+                                                <ExponentialEaseInOut />
+                                            </DoubleTransition.Easing>
+                                        </DoubleTransition>
+                                        <DoubleTransition Property="Height" Duration="0:0:0.15">
+                                            <DoubleTransition.Easing>
+                                                <ExponentialEaseInOut />
+                                            </DoubleTransition.Easing>
+                                        </DoubleTransition>
+                                    </Transitions>
+                                </Ellipse.Transitions>
+                            </Ellipse>
+                            <Ellipse
+                                x:Name="PART_Overlay"
+                                Width="20"
+                                Height="20"
+                                Opacity="0"
+                                Stroke="{DynamicResource BorderBrush}"
+                                UseLayoutRounding="False" />
+                        </Grid>
+                        <ContentPresenter
+                            x:Name="PART_ContentPresenter"
+                            Grid.Column="1"
+                            Margin="4,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Foreground="{TemplateBinding Foreground}"
+                            RecognizesAccessKey="True" />
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+        <!--  Pressed State  -->
+        <Style Selector="^:pressed">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="{DynamicResource RadioButtonForegroundPressed}" />
+            </Style>
+            <Style Selector="^ /template/ Ellipse#OuterEllipse">
+                <Setter Property="Stroke" Value="{DynamicResource BorderBrush}" />
+                <Setter Property="Fill" Value="{DynamicResource SurfaceOverlayBrush}" />
+            </Style>
+        </Style>
+        <!--  Disabled State  -->
+        <Style Selector="^:disabled">
+            <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="{DynamicResource MutedForegroundBrush}" />
+            </Style>
+            <Style Selector="^:disabled /template/ Ellipse#OuterEllipse">
+                <Setter Property="Stroke" Value="{DynamicResource BorderBrush}" />
+                <Setter Property="Fill" Value="{DynamicResource MutedBrush}" />
+            </Style>
+            <Style Selector="^:disabled /template/ Ellipse#CheckOuterEllipse">
+                <Setter Property="Stroke" Value="{DynamicResource BorderBrush}" />
+                <Setter Property="Fill" Value="{DynamicResource MutedBrush}" />
+            </Style>
+            <Style Selector="^:disabled /template/ Ellipse#CheckGlyph">
+                <Setter Property="Stroke" Value="{DynamicResource RadioButtonCheckGlyphFillDisabled}" />
+                <Setter Property="Fill" Value="{DynamicResource RadioButtonCheckGlyphStrokeDisabled}" />
+            </Style>
+        </Style>
+        <!--  Checked State  -->
+        <Style Selector="^:checked">
+            <Style Selector="^:checked /template/ Ellipse#CheckGlyph">
+                <Setter Property="Opacity" Value="1" />
+                <Setter Property="Width" Value="10" />
+                <Setter Property="Height" Value="10" />
+            </Style>
+            <Style Selector="^:checked /template/ Ellipse#OuterEllipse">
+                <Setter Property="Opacity" Value="0" />
+            </Style>
+            <Style Selector="^:checked /template/ Ellipse#CheckOuterEllipse">
+                <Setter Property="Opacity" Value="1" />
+            </Style>
+            <Style Selector="^:pressed">
+                <Style Selector="^ /template/ Ellipse#PART_Overlay">
+                    <Setter Property="Fill" Value="{DynamicResource DarkenOverlayBrush}" />
+                </Style>
+            </Style>
+        </Style>
+        <!--  Toggle Kind  -->
         <Style Selector="^.Toggle">
             <!--  Base  -->
             <Setter Property="FontWeight" Value="SemiBold" />
@@ -154,6 +299,12 @@
                     <Style Selector="^ /template/ Border#PART_ButtonRoot">
                         <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
                     </Style>
+                    <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
+                        <Style Selector="^ /template/ Border#PART_Overlay">
+                            <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
+                        </Style>
+                    </Style>
                     <Style Selector="^:pressed">
                         <Style Selector="^ /template/ Border#PART_Overlay">
                             <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
@@ -189,6 +340,9 @@
                     <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
                     <Style Selector="^ /template/ Border#PART_ButtonRoot">
                         <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+                    </Style>
+                    <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
                     </Style>
                     <Style Selector="^:pressed">
                         <Style Selector="^ /template/ Border#PART_Overlay">
