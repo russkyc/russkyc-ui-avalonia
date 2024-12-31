@@ -21,6 +21,7 @@ public partial class MainViewModel : ViewModelBase
             new ButtonView(),
             new ToggleButtonView(),
             new TextBoxView(),
+            new ComboBoxView(),
             new CardView()
         ];
         

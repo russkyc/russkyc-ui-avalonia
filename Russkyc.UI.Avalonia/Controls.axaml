@@ -1,18 +1,18 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Add Resources Here -->
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  Add Resources Here  -->
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary>
             <ControlTheme x:Key="{x:Type Window}" TargetType="Window">
                 <Setter Property="Background" Value="{DynamicResource BackgroundBrush}" />
                 <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
-                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="FontSize" Value="14" />
             </ControlTheme>
         </ResourceDictionary>
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Button.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/RadioButton.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ToggleButton.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/TextBox.axaml" />
+        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ComboBox.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Border.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
