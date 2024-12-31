@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Russkyc.UI.Avalonia.Gallery.Browser",
   "resources": {
-    "hash": "sha256-dIsAJFNQ7L2rsk74y3y+Pd0irF0jTsRomVExsZWYVS8=",
+    "hash": "sha256-tz3gC9rJ+NOBR/wsbgDla9z/Oad1E+6hs1jv/pc72io=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.jwxbg2sdkm.js": "sha256-InOmaVgBw3AntDnlajAioiIGnS4YpRYwqYFgBosC0PE="
     },
@@ -17,9 +17,9 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Avalonia.Base.wasm": "sha256-iGksFjfQu2sXsejrHJk6tX4j+RWSAp5g81TZqQlL6ac=",
+      "Avalonia.Base.wasm": "sha256-TZUACiREZa/3IGCBkfDWXodh7dSKx0NQE5YlvdfllgE=",
       "Avalonia.Browser.wasm": "sha256-J5Mxgr8h1Fb26EtBQl38DxpS5B8H1qFLgqtp8WynkBo=",
-      "Avalonia.Controls.wasm": "sha256-N8c4hedHWdyBzE/FNtc6QW1wkdY586waOrh7dQUzgOQ=",
+      "Avalonia.Controls.wasm": "sha256-BPaJSfCF8XyvWUtskwJ2NOxkbjQ0GoGDX4M559k1mhY=",
       "Avalonia.DesignerSupport.wasm": "sha256-F5G3vY67Ly9DGie7DSfScEJXq8JrCY2aP94JVXWPKxU=",
       "Avalonia.Dialogs.wasm": "sha256-Jg3tsl04qrTqjXR9M+MLpHEKZP+URACHyWZP9yxZ/CQ=",
       "Avalonia.Fonts.Inter.wasm": "sha256-ug8qPEqzOaYF0GxMyJ24AXJ2JfUt9zzrkdY0Yw2AlB8=",
@@ -39,9 +39,9 @@
       "HarfBuzzSharp.wasm": "sha256-YNii5oT5Wu6rgx0u/dpWdNxBYcrrh8G9XKom3mG5WTg=",
       "MicroCom.Runtime.wasm": "sha256-dI22KS20yc+ziyg4tSUpmSjG0ebPXDL5QTSZf+ehjwI=",
       "netstandard.wasm": "sha256-0G807/izOXamlI0nIZjOYPaqWL07fMHdaPkmVRkRCtY=",
-      "Russkyc.UI.Avalonia.Gallery.Browser.wasm": "sha256-BVoyO/OTRD/oCbcEiuJlDRolbtwX6rlmZ95CDlbv4a8=",
-      "Russkyc.UI.Avalonia.Gallery.wasm": "sha256-m5wtuQuomXMD9S9H7AJoiqvhhppJpNhPUWTsQlKCJOw=",
-      "Russkyc.UI.Avalonia.wasm": "sha256-R2rB5m9BjV8tqgGQViIYnh2h9sA37Y1nrtN2Wqn+5oM=",
+      "Russkyc.UI.Avalonia.Gallery.Browser.wasm": "sha256-RbYrUIEGX4AIXHHa1Rg9fuCQfDrogGwamp2/KGmRVcQ=",
+      "Russkyc.UI.Avalonia.Gallery.wasm": "sha256-8A377IOWxbm6agIqroKCxu6k9mxn6GGOh52CxDse97g=",
+      "Russkyc.UI.Avalonia.wasm": "sha256-GAE9/IN45ZM8FK5WFmOQGL0GgQBCygLQCcUntbOkvos=",
       "ShimSkiaSharp.wasm": "sha256-6zIxMG3ie+WslxcylFjJZQXZXyO9gC0OwrGlaKVf+9U=",
       "SkiaSharp.wasm": "sha256-pAYgBfKgIP8DgtJTF51rFLysH0dA1acwPy+d79OJe7g=",
       "Svg.Custom.wasm": "sha256-8JEKS2tfP4O+bxjp2iqz5GWq0F3Zph4P+SkcRoZrbl8=",
