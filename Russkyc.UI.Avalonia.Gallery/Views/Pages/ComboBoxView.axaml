@@ -1,0 +1,79 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.ComboBoxView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="ComboBox" />
+            <TextBlock Text="Displays a ComboBox component" />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="ComboBox Variants Preview" />
+            <Border Classes="Card">
+                <StackPanel
+                    Width="300"
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+                    <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Default ComboBox">
+                        <ComboBoxItem>Apple</ComboBoxItem>
+                        <ComboBoxItem>Banana</ComboBoxItem>
+                        <ComboBoxItem>Blueberry</ComboBoxItem>
+                        <ComboBoxItem>Grapes</ComboBoxItem>
+                        <ComboBoxItem>Pineapple</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox
+                        HorizontalAlignment="Stretch"
+                        IsEnabled="False"
+                        PlaceholderText="Disabled ComboBox">
+                        <ComboBoxItem>Apple</ComboBoxItem>
+                        <ComboBoxItem>Banana</ComboBoxItem>
+                        <ComboBoxItem>Blueberry</ComboBoxItem>
+                        <ComboBoxItem>Grapes</ComboBoxItem>
+                        <ComboBoxItem>Pineapple</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Error">
+                        <DataValidationErrors.Error>
+                            <system:Exception>
+                                <x:Arguments>
+                                    <x:String>Please select a fruit</x:String>
+                                </x:Arguments>
+                            </system:Exception>
+                        </DataValidationErrors.Error>
+                        <ComboBoxItem>Apple</ComboBoxItem>
+                        <ComboBoxItem>Banana</ComboBoxItem>
+                        <ComboBoxItem>Blueberry</ComboBoxItem>
+                        <ComboBoxItem>Grapes</ComboBoxItem>
+                        <ComboBoxItem>Pineapple</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Code" />
+            <ThemeVariantScope RequestedThemeVariant="Dark">
+                <TextBox
+                    Name="CodeBlock"
+                    Padding="12"
+                    CornerRadius="12"
+                    FontSize="16"
+                    IsReadOnly="True" />
+            </ThemeVariantScope>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

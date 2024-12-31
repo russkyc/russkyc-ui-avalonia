@@ -1,24 +1,25 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Defaults -->
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  Defaults  -->
     <CornerRadius x:Key="Radius">5</CornerRadius>
     <Thickness x:Key="BorderThickness">1</Thickness>
-    <Thickness x:Key="ActiveBorderThickness">2</Thickness>
+    <Thickness x:Key="ActiveBorderThickness">1</Thickness>
     <Thickness x:Key="Padding">12,7</Thickness>
-    <!-- Theme -->
+    <x:Double x:Key="ControlMinHeight">36</x:Double>
+
+    <!--  Theme  -->
     <ResourceDictionary.ThemeDictionaries>
-        <!-- Light -->
+        <!--  Light  -->
         <ResourceDictionary x:Key="Light">
-            <!-- Colors -->
+            <!--  Colors  -->
             <Color x:Key="Background">#FFFFFF</Color>
             <Color x:Key="Foreground">#000000</Color>
             <Color x:Key="Card">#FFFFFF</Color>
             <Color x:Key="CardForeground">#000000</Color>
             <Color x:Key="Popover">#FFFFFF</Color>
             <Color x:Key="PopoverForeground">#000000</Color>
-            <Color x:Key="Primary">	#18181b</Color>
+            <Color x:Key="Primary">#18181b</Color>
             <Color x:Key="PrimaryForeground">#FAFAFA</Color>
-            <Color x:Key="Secondary">	#f4f4f5</Color>
+            <Color x:Key="Secondary">#f4f4f5</Color>
             <Color x:Key="SecondaryForeground">#18181B</Color>
             <Color x:Key="Muted">#F4F4F5</Color>
             <Color x:Key="MutedForeground">#71717A</Color>
@@ -35,18 +36,18 @@
             <Color x:Key="SurfaceOverlay">#06000000</Color>
             <Color x:Key="SurfaceOverlayDeepen">#12000000</Color>
         </ResourceDictionary>
-        <!-- Dark -->
+        <!--  Dark  -->
         <ResourceDictionary x:Key="Dark">
-            <!-- Colors -->
+            <!--  Colors  -->
             <Color x:Key="Background">#09090B</Color>
             <Color x:Key="Foreground">#FAFAFA</Color>
             <Color x:Key="Card">#09090B</Color>
             <Color x:Key="CardForeground">#FAFAFA</Color>
             <Color x:Key="Popover">#09090B</Color>
             <Color x:Key="PopoverForeground">#FAFAFA</Color>
-            <Color x:Key="Primary">	#FAFAFA</Color>
+            <Color x:Key="Primary">#FAFAFA</Color>
             <Color x:Key="PrimaryForeground">#18181B</Color>
-            <Color x:Key="Secondary">	#27272A</Color>
+            <Color x:Key="Secondary">#27272A</Color>
             <Color x:Key="SecondaryForeground">#FAFAFA</Color>
             <Color x:Key="Muted">#27272A</Color>
             <Color x:Key="MutedForeground">#A1A1AA</Color>

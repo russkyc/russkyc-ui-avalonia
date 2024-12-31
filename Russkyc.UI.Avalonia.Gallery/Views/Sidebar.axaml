@@ -1,0 +1,59 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Sidebar"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:Russkyc.UI.Avalonia.Gallery.ViewModels"
+    d:DesignWidth="250"
+    x:DataType="viewModels:MainViewModel"
+    mc:Ignorable="d">
+    <StackPanel Margin="12" Spacing="7">
+        <TextBlock
+            Margin="0,0,0,8"
+            FontSize="18"
+            FontWeight="SemiBold"
+            Text="Components" />
+        <RadioButton
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            Content="Button"
+            IsChecked="True">
+            <RadioButton.CommandParameter>
+                <x:Int32>0</x:Int32>
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            Content="Toggle Button">
+            <RadioButton.CommandParameter>
+                <x:Int32>1</x:Int32>
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            Content="Textbox">
+            <RadioButton.CommandParameter>
+                <x:Int32>2</x:Int32>
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            Content="ComboBox">
+            <RadioButton.CommandParameter>
+                <x:Int32>3</x:Int32>
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            Content="Card">
+            <RadioButton.CommandParameter>
+                <x:Int32>4</x:Int32>
+            </RadioButton.CommandParameter>
+        </RadioButton>
+    </StackPanel>
+</UserControl>

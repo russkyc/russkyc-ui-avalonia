@@ -82,7 +82,7 @@
         <Setter Property="SelectionForegroundBrush" Value="{DynamicResource ForegroundBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
         <Setter Property="CornerRadius" Value="{DynamicResource Radius}" />
-        <Setter Property="MinHeight" Value="36" />
+        <Setter Property="MinHeight" Value="{DynamicResource ControlMinHeight}" />
         <Setter Property="MinWidth" Value="10" />
         <Setter Property="Padding" Value="{DynamicResource Padding}" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
