@@ -1,20 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <Nullable>enable</Nullable>
         <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
         <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
         <TrimmerSingleWarn>false</TrimmerSingleWarn>
         <IsTrimmable>true</IsTrimmable>
         <AvaloniaXamlC>true</AvaloniaXamlC>
+        <LangVersion>latestmajor</LangVersion>
     </PropertyGroup>
-
+    
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Russkyc.UI.Avalonia</Title>
+        <Authors>russkyc</Authors>
+        <Description>Clean, beautifully-designed, and customizable components for Avalonia applications</Description>
+        <Copyright>russkyc 2025</Copyright>
+        <PackageTags>avalonia shadcn ui controls theme avalonia-ui components</PackageTags>
+        <PackageProjectUrl>https://github.com/russkyc/russkyc-ui-avalonia</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/russkyc/russkyc-ui-avalonia</RepositoryUrl>
+        <Version>0.1.0-pre</Version>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <IsPackable>true</IsPackable>
+        <PackageIcon>PackageIcon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+    
     <ItemGroup>
         <PackageReference Include="Avalonia"/>
-        <PackageReference Include="Avalonia.Svg" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Fonts\" />
+        <Resource Include="PackageIcon.png" Pack="true" PackagePath="" />
+        <None Include="README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
+    
 </Project>

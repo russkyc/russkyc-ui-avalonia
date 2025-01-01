@@ -8,12 +8,35 @@
 Russkyc.UI.Avalonia provides clean, beautifully-designed, and customizable components inspired by the design of <a href="https://ui.shadcn.com">shadcn/ui</a> for Avalonia applications.
 </p>
 
-## Installation
+## Installation (Pre-release)
 
 #### 1. Download
+The package can be downloaded installed by the Nuget package manager UI,
+Package Reference, Nuget CLI, Package manager, and other Nuget supported
+channels.
 
-> [!WARNING]  
-> Russkyc.UI.Avalonia is in early development stage and currently has no available nuget packages
+<div align="center">
+    <br/>
+    <a href="https://www.nuget.org/packages/Russkyc.UI.Avalonia">
+        <img src=".github/resources/images/nuget-button.svg" style="width:200px" alt="Nuget">
+    </a>
+    <br/>
+</div>
+
+PackageReference
+```
+<PackageReference Include="Russkyc.UI.Avalonia" Version="0.1.0-pre" />
+```
+
+Nuget CLI
+```
+dotnet add package Russkyc.UI.Avalonia --version 0.1.0-pre
+```
+
+Package Manager
+```
+NuGet\Install-Package Russkyc.UI.Avalonia -Version 0.1.0-pre
+```
 
 #### 2. Configuration
 
@@ -60,25 +83,26 @@ All components use the defaults and theme provided in this template.
 ```xaml
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Defaults -->
+    <!--  Defaults  -->
     <CornerRadius x:Key="Radius">5</CornerRadius>
     <Thickness x:Key="BorderThickness">1</Thickness>
-    <Thickness x:Key="ActiveBorderThickness">2</Thickness>
+    <Thickness x:Key="ActiveBorderThickness">1</Thickness>
     <Thickness x:Key="Padding">12,7</Thickness>
-    <!-- Theme -->
+    <x:Double x:Key="ControlMinHeight">36</x:Double>
+    <!--  Theme  -->
     <ResourceDictionary.ThemeDictionaries>
-        <!-- Light -->
+        <!--  Light  -->
         <ResourceDictionary x:Key="Light">
-            <!-- Colors -->
+            <!--  Colors  -->
             <Color x:Key="Background">#FFFFFF</Color>
             <Color x:Key="Foreground">#000000</Color>
             <Color x:Key="Card">#FFFFFF</Color>
             <Color x:Key="CardForeground">#000000</Color>
             <Color x:Key="Popover">#FFFFFF</Color>
             <Color x:Key="PopoverForeground">#000000</Color>
-            <Color x:Key="Primary">	#18181b</Color>
+            <Color x:Key="Primary">#18181b</Color>
             <Color x:Key="PrimaryForeground">#FAFAFA</Color>
-            <Color x:Key="Secondary">	#f4f4f5</Color>
+            <Color x:Key="Secondary">#f4f4f5</Color>
             <Color x:Key="SecondaryForeground">#18181B</Color>
             <Color x:Key="Muted">#F4F4F5</Color>
             <Color x:Key="MutedForeground">#71717A</Color>
@@ -95,18 +119,18 @@ All components use the defaults and theme provided in this template.
             <Color x:Key="SurfaceOverlay">#06000000</Color>
             <Color x:Key="SurfaceOverlayDeepen">#12000000</Color>
         </ResourceDictionary>
-        <!-- Dark -->
+        <!--  Dark  -->
         <ResourceDictionary x:Key="Dark">
-            <!-- Colors -->
+            <!--  Colors  -->
             <Color x:Key="Background">#09090B</Color>
             <Color x:Key="Foreground">#FAFAFA</Color>
             <Color x:Key="Card">#09090B</Color>
             <Color x:Key="CardForeground">#FAFAFA</Color>
             <Color x:Key="Popover">#09090B</Color>
             <Color x:Key="PopoverForeground">#FAFAFA</Color>
-            <Color x:Key="Primary">	#FAFAFA</Color>
+            <Color x:Key="Primary">#FAFAFA</Color>
             <Color x:Key="PrimaryForeground">#18181B</Color>
-            <Color x:Key="Secondary">	#27272A</Color>
+            <Color x:Key="Secondary">#27272A</Color>
             <Color x:Key="SecondaryForeground">#FAFAFA</Color>
             <Color x:Key="Muted">#27272A</Color>
             <Color x:Key="MutedForeground">#A1A1AA</Color>
@@ -126,6 +150,23 @@ All components use the defaults and theme provided in this template.
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>
 ```
+
+Which will now replace the default theme in `App.axaml`
+
+```xaml
+<Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <!-- Theme (Replace with new theme) -->
+            <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Themes/Zinc.axaml" />
+            <!-- Base (Required) -->
+            <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Base.axaml" />
+            <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls.axaml" />
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+</Application.Resources>
+```
+
 
 ## License
 

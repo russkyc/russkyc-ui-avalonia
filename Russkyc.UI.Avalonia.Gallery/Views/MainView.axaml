@@ -13,19 +13,15 @@
     <Design.DataContext>
         <vm:MainViewModel />
     </Design.DataContext>
-    <UserControl.Styles>
-        <Style Selector="RadioButton.Navigation">
-            <Setter Property="HorizontalAlignment" Value="Stretch" />
-            <Setter Property="HorizontalContentAlignment" Value="Left" />
-        </Style>
-    </UserControl.Styles>
     <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0">
         <Grid ColumnDefinitions="250,*">
             <Border
                 Grid.Column="0"
                 BorderBrush="{DynamicResource BorderBrush}"
                 BorderThickness="0,0,1,0">
-                <views:Sidebar DataContext="{Binding}" />
+                <ScrollViewer>
+                    <views:Sidebar DataContext="{Binding}" />
+                </ScrollViewer>
             </Border>
             <ScrollViewer Grid.Column="1">
                 <ContentControl Content="{Binding ActivePage}" />

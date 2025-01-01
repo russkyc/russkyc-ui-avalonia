@@ -1,0 +1,39 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.IntroductionView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="Russkyc.UI.Avalonia" />
+            <TextBlock Text="Clean, beautifully-designed, and customizable components for Avalonia Applications." />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Why create a theme inspired by web design principles for a native platform?" />
+            <TextBlock Text="Creating a theme inspired by web design principles, particularly the way shadcn is designed, ensures a consistent, modern, and user-friendly experience across different platforms. Leveraging the consistent visual appeal from a widely known design language." TextWrapping="Wrap" />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Is this themeable? What about customization?" />
+            <TextBlock Text="Yes! Russkyc.UI.Avalonia is themeable and easily customizable. We want to minimize the difficulty in templating and styling controls, all colors, values, and defaults, are defined in a single resource dictionary with support for both light and dark variants." TextWrapping="Wrap" />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="How can I get started?" />
+            <TextBlock Text="Installation and initial configuration information can be found in the Installation page." TextWrapping="Wrap" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

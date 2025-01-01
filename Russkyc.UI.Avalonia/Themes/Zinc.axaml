@@ -5,7 +5,6 @@
     <Thickness x:Key="ActiveBorderThickness">1</Thickness>
     <Thickness x:Key="Padding">12,7</Thickness>
     <x:Double x:Key="ControlMinHeight">36</x:Double>
-
     <!--  Theme  -->
     <ResourceDictionary.ThemeDictionaries>
         <!--  Light  -->
