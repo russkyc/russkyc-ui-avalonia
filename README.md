@@ -3,7 +3,13 @@
 </a>
 
 <h2 align="center">Russkyc.UI.Avalonia - Create Beautiful UI's for Avalonia</h2>
-
+<p align="center">
+    <img src="https://img.shields.io/nuget/v/Russkyc.UI.Avalonia?color=1f72de" alt="Nuget">
+    <img src="https://img.shields.io/badge/-.NET%20Standard%202.0-blueviolet?color=1f72de&label=NET" alt="">
+    <img src="https://img.shields.io/github/license/russkyc/russkyc-ui-avalonia">
+    <img src="https://img.shields.io/github/issues/russkyc/russkyc-ui-avalonia">
+    <img src="https://img.shields.io/nuget/dt/Russkyc.UI.Avalonia">
+</p>
 <p style="text-align: justify">
 Russkyc.UI.Avalonia provides clean, beautifully-designed, and customizable components inspired by the design of <a href="https://ui.shadcn.com">shadcn/ui</a> for Avalonia applications.
 </p>
