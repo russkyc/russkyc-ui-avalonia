@@ -1,27 +1,89 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Design Preview -->
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  Design Preview  -->
     <Design.PreviewWith>
-        <Border Classes="Card"
+        <StackPanel Spacing="12">
+            <Border
                 Width="350"
                 Margin="80"
-                Background="{DynamicResource BackgroundBrush}">
-            <StackPanel Spacing="7">
-                <StackPanel Margin="0,0,0,16">
-                    <TextBlock Text="Login" FontSize="24" FontWeight="Bold"/>
-                    <TextBlock FontSize="16" Foreground="#3F3F3F" Text="Login or sign-up to an account"/>
+                Background="{DynamicResource BackgroundBrush}"
+                Classes="Card">
+                <StackPanel Spacing="7">
+                    <StackPanel Margin="0,0,0,16">
+                        <TextBlock
+                            FontSize="24"
+                            FontWeight="Bold"
+                            Text="Login" />
+                        <TextBlock
+                            FontSize="16"
+                            Foreground="#3F3F3F"
+                            Text="Login or sign-up to an account" />
+                    </StackPanel>
+                    <TextBox Watermark="Username" />
+                    <TextBox
+                        Classes="ShowHide"
+                        PasswordChar="●"
+                        Watermark="Password">
+                        Password
+                    </TextBox>
+                    <Button
+                        Margin="0,16,0,0"
+                        HorizontalAlignment="Stretch"
+                        Content="Login" />
+                    <Button
+                        HorizontalAlignment="Stretch"
+                        Classes="Ghost"
+                        Content="Create Account" />
                 </StackPanel>
-                <TextBox Watermark="Username"/>
-                <TextBox Watermark="Password" PasswordChar="●" Classes="ShowHide">Password</TextBox>
-                <Button Margin="0,16,0,0" HorizontalAlignment="Stretch" Content="Login" />
-                <Button HorizontalAlignment="Stretch" Classes="Ghost" Content="Create Account" />
+            </Border>
+            <StackPanel
+                Margin="0,0,0,20"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal"
+                Spacing="12">
+                <Border Classes="Pill">
+                    <TextBlock Text="Standard Pill" />
+                </Border>
+                <Border Classes="Pill Primary">
+                    <TextBlock Text="Primary Pill" />
+                </Border>
+                <Border Classes="Pill Secondary">
+                    <TextBlock Text="Secondary Pill" />
+                </Border>
+                <Border Classes="Pill Destructive">
+                    <TextBlock Text="Destructive Pill" />
+                </Border>
             </StackPanel>
-        </Border>
+        </StackPanel>
     </Design.PreviewWith>
     <ControlTheme x:Key="{x:Type Border}" TargetType="Border">
+        <Style Selector="^.Pill">
+            <Setter Property="TextBlock.FontSize" Value="10" />
+            <Setter Property="TextBlock.FontWeight" Value="SemiBold" />
+            <Setter Property="Padding" Value="8,2" />
+            <Setter Property="Background" Value="{DynamicResource BackgroundBrush}" />
+            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundBrush}" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+            <Style Selector="^.Primary">
+                <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+                <Setter Property="TextBlock.Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
+            </Style>
+            <Style Selector="^.Secondary">
+                <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource SecondaryBrush}" />
+                <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryForegroundBrush}" />
+            </Style>
+            <Style Selector="^.Destructive">
+                <Setter Property="Background" Value="{DynamicResource DestructiveBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource DestructiveBrush}" />
+                <Setter Property="TextBlock.Foreground" Value="{DynamicResource DestructiveForegroundBrush}" />
+            </Style>
+        </Style>
         <Style Selector="^.Card">
-            <Setter Property="Padding" Value="28"/>
-            <Setter Property="Background" Value="{DynamicResource Background}"/>
+            <Setter Property="Padding" Value="28" />
+            <Setter Property="Background" Value="{DynamicResource Background}" />
             <Setter Property="CornerRadius" Value="12" />
             <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
             <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />

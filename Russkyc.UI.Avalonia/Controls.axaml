@@ -7,8 +7,8 @@
                 <Setter Property="FontSize" Value="14" />
             </ControlTheme>
         </ResourceDictionary>
-        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Button.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Border.axaml" />
+        <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/Button.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/RadioButton.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ToggleButton.axaml" />
         <ResourceInclude Source="avares://Russkyc.UI.Avalonia/Controls/ToggleSwitch.axaml" />

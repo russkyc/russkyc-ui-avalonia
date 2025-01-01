@@ -1,6 +1,5 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Base -->
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  Base  -->
     <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource Background}" />
     <SolidColorBrush x:Key="ForegroundBrush" Color="{DynamicResource Foreground}" />
     <SolidColorBrush x:Key="CardBrush" Color="{DynamicResource Card}" />

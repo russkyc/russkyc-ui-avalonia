@@ -4,23 +4,108 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Russkyc.UI.Avalonia.Gallery.Views.Pages"
     xmlns:viewModels="clr-namespace:Russkyc.UI.Avalonia.Gallery.ViewModels"
+    x:Name="SidebarView"
     d:DesignWidth="250"
     x:DataType="viewModels:MainViewModel"
     mc:Ignorable="d">
-    <StackPanel Margin="12" Spacing="7">
+    <UserControl.Styles>
+        <Style Selector="RadioButton.Navigation">
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+        </Style>
+    </UserControl.Styles>
+    <Interaction.Behaviors>
+        <EventTriggerBehavior EventName="Loaded" SourceObject="SidebarView">
+            <InvokeCommandAction Command="{Binding OpenPageCommand}">
+                <InvokeCommandAction.CommandParameter>
+                    <pages:IntroductionView />
+                </InvokeCommandAction.CommandParameter>
+            </InvokeCommandAction>
+            <ChangePropertyAction
+                PropertyName="IsChecked"
+                TargetObject="IndexNav"
+                Value="True" />
+        </EventTriggerBehavior>
+    </Interaction.Behaviors>
+    <StackPanel Margin="12" Spacing="4">
         <TextBlock
-            Margin="0,0,0,8"
-            FontSize="18"
+            Margin="0,8"
+            FontSize="16"
+            FontWeight="SemiBold"
+            Text="Overview" />
+        <RadioButton
+            x:Name="IndexNav"
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            Content="Introduction">
+            <RadioButton.CommandParameter>
+                <pages:IntroductionView />
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            HorizontalContentAlignment="Stretch"
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}">
+            <RadioButton.Content>
+                <Grid>
+                    <TextBlock Text="Installation" />
+                    <Border HorizontalAlignment="Right" Classes="Pill">
+                        <TextBlock Text="v0.1.0-pre" />
+                    </Border>
+                </Grid>
+            </RadioButton.Content>
+            <RadioButton.CommandParameter>
+                <pages:InstallationView />
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            HorizontalContentAlignment="Stretch"
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            IsEnabled="False">
+            <RadioButton.CommandParameter>
+                <pages:ThemingView />
+            </RadioButton.CommandParameter>
+            <RadioButton.Content>
+                <Grid>
+                    <TextBlock Text="Theming" />
+                    <Border HorizontalAlignment="Right" Classes="Pill Secondary">
+                        <TextBlock Text="Soon" />
+                    </Border>
+                </Grid>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton
+            HorizontalContentAlignment="Stretch"
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
+            IsEnabled="False">
+            <RadioButton.CommandParameter>
+                <pages:ExamplesView />
+            </RadioButton.CommandParameter>
+            <RadioButton.Content>
+                <Grid>
+                    <TextBlock Text="Examples" />
+                    <Border HorizontalAlignment="Right" Classes="Pill Secondary">
+                        <TextBlock Text="Soon" />
+                    </Border>
+                </Grid>
+            </RadioButton.Content>
+        </RadioButton>
+        <TextBlock
+            Margin="0,8"
+            FontSize="16"
             FontWeight="SemiBold"
             Text="Components" />
         <RadioButton
             Classes="Toggle Navigation"
             Command="{Binding OpenPageCommand}"
-            Content="Button"
-            IsChecked="True">
+            Content="Button">
             <RadioButton.CommandParameter>
-                <x:Int32>0</x:Int32>
+                <pages:ButtonView />
             </RadioButton.CommandParameter>
         </RadioButton>
         <RadioButton
@@ -28,7 +113,7 @@
             Command="{Binding OpenPageCommand}"
             Content="ToggleButton">
             <RadioButton.CommandParameter>
-                <x:Int32>1</x:Int32>
+                <pages:ToggleButtonView />
             </RadioButton.CommandParameter>
         </RadioButton>
         <RadioButton
@@ -36,7 +121,7 @@
             Command="{Binding OpenPageCommand}"
             Content="ToggleSwitch">
             <RadioButton.CommandParameter>
-                <x:Int32>2</x:Int32>
+                <pages:ToggleSwitchView />
             </RadioButton.CommandParameter>
         </RadioButton>
         <RadioButton
@@ -44,7 +129,7 @@
             Command="{Binding OpenPageCommand}"
             Content="RadioButton">
             <RadioButton.CommandParameter>
-                <x:Int32>3</x:Int32>
+                <pages:RadioButtonView />
             </RadioButton.CommandParameter>
         </RadioButton>
         <RadioButton
@@ -52,7 +137,7 @@
             Command="{Binding OpenPageCommand}"
             Content="Textbox">
             <RadioButton.CommandParameter>
-                <x:Int32>4</x:Int32>
+                <pages:TextBoxView />
             </RadioButton.CommandParameter>
         </RadioButton>
         <RadioButton
@@ -60,7 +145,7 @@
             Command="{Binding OpenPageCommand}"
             Content="ComboBox">
             <RadioButton.CommandParameter>
-                <x:Int32>5</x:Int32>
+                <pages:ComboBoxView />
             </RadioButton.CommandParameter>
         </RadioButton>
         <RadioButton
@@ -68,7 +153,23 @@
             Command="{Binding OpenPageCommand}"
             Content="Card">
             <RadioButton.CommandParameter>
-                <x:Int32>6</x:Int32>
+                <pages:CardView />
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            HorizontalContentAlignment="Stretch"
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}">
+            <RadioButton.Content>
+                <Grid>
+                    <TextBlock Text="Pill" />
+                    <Border HorizontalAlignment="Right" Classes="Pill Primary">
+                        <TextBlock Text="New" />
+                    </Border>
+                </Grid>
+            </RadioButton.Content>
+            <RadioButton.CommandParameter>
+                <pages:PillView />
             </RadioButton.CommandParameter>
         </RadioButton>
     </StackPanel>

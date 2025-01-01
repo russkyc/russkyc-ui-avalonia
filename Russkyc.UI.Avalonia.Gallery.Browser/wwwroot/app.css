@@ -10,24 +10,24 @@
     pointer-events: none;
 }
 
-@media (prefers-color-scheme: light) {
-    html, body {
-        background: white;
-    }
-    .avalonia-splash {
-        background: white;
-        color: black;
-    }
+html, body {
+    background: white;
 }
 
-@media (prefers-color-scheme: dark) {
-    html, body {
-        background: black;
-    }
-    .avalonia-splash {
-        background: black;
-        color: white;
-    }
+.avalonia-splash a {
+    color: #101010;
+}
+
+.avalonia-splash h4 {
+    font-weight: 400;
+}
+
+.avalonia-splash {
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .avalonia-splash.splash-close {

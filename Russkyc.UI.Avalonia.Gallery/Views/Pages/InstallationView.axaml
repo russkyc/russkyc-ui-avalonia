@@ -1,0 +1,58 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.InstallationView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <TextBlock
+                    FontSize="24"
+                    FontWeight="Bold"
+                    Text="Installation" />
+                <Border VerticalAlignment="Center" Classes="Pill">
+                    <TextBlock Text="Pre-release v0.1.0" />
+                </Border>
+            </StackPanel>
+            <TextBlock Text="Quick start and configuration guide." />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Nuget Installation" />
+            <TextBlock Text="The package can be installed using the Nuget CLI, Package Manager, or other supported Nuget platforms" TextWrapping="Wrap" />
+            <TextBlock FontWeight="SemiBold" Text="CLI Installation" />
+            <TextBox
+                Padding="12"
+                CornerRadius="12"
+                FontSize="16"
+                IsReadOnly="True"
+                Text="dotnet add package Russkyc.UI.Avalonia --version 0.1.0-pre" />
+            <TextBlock FontWeight="SemiBold" Text="Package Manager Installation" />
+            <TextBox
+                Padding="12"
+                CornerRadius="12"
+                FontSize="16"
+                IsReadOnly="True"
+                Text="NuGet\Install-Package Russkyc.UI.Avalonia -Version 0.1.0-pre" />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Configuration" />
+            <TextBlock Text="After installation, update App.axaml with the required resources" TextWrapping="Wrap" />
+            <TextBlock FontWeight="SemiBold" Text="App.Axaml" />
+            <TextBox
+                x:Name="ConfigurationBlock"
+                Padding="12"
+                CornerRadius="12"
+                FontSize="16"
+                IsReadOnly="True" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

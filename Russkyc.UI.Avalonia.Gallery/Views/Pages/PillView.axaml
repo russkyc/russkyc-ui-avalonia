@@ -1,0 +1,62 @@
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.PillView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="Pill" />
+            <TextBlock Text="Displays a pill shaped control." />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Pill Variants Preview" />
+            <Border Classes="Card">
+                <WrapPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <WrapPanel.Styles>
+                        <Style Selector="Border">
+                            <Setter Property="Margin" Value="4" />
+                        </Style>
+                    </WrapPanel.Styles>
+                    <Border Classes="Pill">
+                        <TextBlock Text="Standard Pill" />
+                    </Border>
+                    <Border Classes="Pill Primary">
+                        <TextBlock Text="Primary Pill" />
+                    </Border>
+                    <Border Classes="Pill Secondary">
+                        <TextBlock Text="Secondary Pill" />
+                    </Border>
+                    <Border Classes="Pill Destructive">
+                        <TextBlock Text="Destructive Pill" />
+                    </Border>
+                </WrapPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Code" />
+            <ThemeVariantScope RequestedThemeVariant="Dark">
+                <TextBox
+                    Name="CodeBlock"
+                    Padding="12"
+                    CornerRadius="12"
+                    FontSize="16"
+                    IsReadOnly="True" />
+            </ThemeVariantScope>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
