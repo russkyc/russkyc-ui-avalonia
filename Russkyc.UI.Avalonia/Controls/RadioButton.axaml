@@ -306,8 +306,11 @@
                         </Style>
                     </Style>
                     <Style Selector="^:pressed">
+                        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                            <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
+                        </Style>
                         <Style Selector="^ /template/ Border#PART_Overlay">
-                            <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
+                            <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
                         </Style>
                     </Style>
                 </Style>
