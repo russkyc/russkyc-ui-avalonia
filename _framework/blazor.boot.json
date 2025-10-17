@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Russkyc.UI.Avalonia.Gallery.Browser",
   "resources": {
-    "hash": "sha256-VdTAO8767Yd+p9bZJb7aWMu+N79ER7MuJQ8ckSUq/Ms=",
+    "hash": "sha256-uy4/qawKjlLI6WggMQ2Vx+DZm5XIId73YNxg/22hOWQ=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-9Fzd5We95Rp03dEKIAbYjPDR3eWyLbmjMlYStvxyiok="
     },
@@ -34,9 +34,9 @@
       "Avalonia.Xaml.Interactivity.wasm": "sha256-1SK54/WFFen966+hsot1fah470y362cPMmQdSoaYbPQ=",
       "CommunityToolkit.Mvvm.wasm": "sha256-ov7wTwnImGSDsYThXjP7IxWMyqDpo4lSdRn7pstmNX0=",
       "HarfBuzzSharp.wasm": "sha256-3VYxqp+EwN6nJDAatTHGX0mg448PPMgh1DqvdigA0I4=",
-      "Russkyc.UI.Avalonia.Gallery.Browser.wasm": "sha256-RaIRZcOjRDt4Hz79D21N8DQffLHC7DHOUSdrrimuoj8=",
-      "Russkyc.UI.Avalonia.Gallery.wasm": "sha256-M0XicYCd4eLos18vn69zt9LOLDTT+iBoQk4SLRaKfcc=",
-      "Russkyc.UI.Avalonia.wasm": "sha256-DiIS3UJaKEczZH1Iw9HB89D+f/6RA4Qx8yDevazrwW8=",
+      "Russkyc.UI.Avalonia.Gallery.Browser.wasm": "sha256-HiMvTYYcDT1sb+LlSt5/vO55KsNi8b4ikKAR0FO688M=",
+      "Russkyc.UI.Avalonia.Gallery.wasm": "sha256-KN30vSuvHDDRRhAouLhYhNyIH4a2+HKr0zFgQDsa/v0=",
+      "Russkyc.UI.Avalonia.wasm": "sha256-awrXNZyDhs9Y+ZyAyY7FlWZAaxaWJgeiQ3Z72EApUjA=",
       "SkiaSharp.wasm": "sha256-6ilZr6GHLLYb8gkOdVfdj/eyMrtDXo0ifzA19SwY12Y=",
       "System.Collections.Concurrent.wasm": "sha256-zUeq0smA23Nv3s4WZjRaLpNhm53h9edHutxwsuxav0E=",
       "System.Collections.NonGeneric.wasm": "sha256-i36qMpmJDadHRlIc/l3s9c/v/wvvm/fexFb2HU8euTw=",
