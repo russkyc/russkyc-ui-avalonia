@@ -49,7 +49,7 @@
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="CornerRadius" Value="{DynamicResource Radius}" />
         <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
-        <Setter Property="Background" Value="{DynamicResource PopoverBrush}" />
+        <Setter Property="Background" Value="{DynamicResource InputBackgroundBrush}" />
         <Setter Property="Padding" Value="{DynamicResource ComboBoxItemThemePadding}" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Template">
@@ -161,7 +161,6 @@
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
                             MinWidth="{DynamicResource ComboBoxThemeMinWidth}"
-                            Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{TemplateBinding CornerRadius}" />
@@ -228,9 +227,9 @@
                                 Margin="0,4,0,0"
                                 Padding="4"
                                 HorizontalAlignment="Stretch"
-                                Background="{DynamicResource PopoverBrush}"
+                                Background="{DynamicResource InputBackgroundBrush}"
                                 BorderBrush="{DynamicResource BorderBrush}"
-                                BorderThickness="{DynamicResource ActiveBorderThickness}"
+                                BorderThickness="{DynamicResource BorderThickness}"
                                 CornerRadius="{TemplateBinding CornerRadius}">
                                 <ScrollViewer
                                     HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
@@ -244,7 +243,9 @@
                 </DataValidationErrors>
             </ControlTemplate>
         </Setter>
-
+        <Style Selector="^ /template/ Border#PART_Border">
+            <Setter Property="Background" Value="{DynamicResource InputBackgroundBrush}" />
+        </Style>
         <!--  PointerOver State  -->
         <Style Selector="^:pointerover /template/ Border#PART_Border">
             <Style Selector="^ /template/ Border#PART_Overlay">
@@ -265,6 +266,7 @@
         <!--  Error State  -->
         <Style Selector="^:error /template/ Border#PART_Border">
             <Setter Property="BorderBrush" Value="{DynamicResource DestructiveBrush}" />
+            <Setter Property="Background" Value="{DynamicResource ActiveFocusDestructiveBorderBrush}"/>
         </Style>
 
         <!--  Focus Pressed State  -->
@@ -277,8 +279,14 @@
         <!--  Focused State  -->
         <Style Selector="^:dropdownopen">
             <Style Selector="^ /template/ Border#PART_Border">
-                <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
-                <Setter Property="BorderThickness" Value="{DynamicResource ActiveBorderThickness}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource ActiveBorderBrush}" />
+                <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
+            </Style>
+            <Style Selector="^:error">
+                <Style Selector="^ /template/ Border#PART_Border">
+                    <Setter Property="BorderBrush" Value="{DynamicResource DestructiveBrush}" />
+                    <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
+                </Style>
             </Style>
         </Style>
 
@@ -289,13 +297,13 @@
                 <Setter Property="Background" Value="{DynamicResource MutedBrush}" />
             </Style>
             <Style Selector="^ /template/ ContentControl#ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxForegroundDisabled}" />
+                <Setter Property="Foreground" Value="{DynamicResource MutedForegroundBrush}" />
             </Style>
             <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxForegroundDisabled}" />
+                <Setter Property="Foreground" Value="{DynamicResource MutedForegroundBrush}" />
             </Style>
             <Style Selector="^ /template/ PathIcon#DropDownGlyph">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxDropDownGlyphForegroundDisabled}" />
+                <Setter Property="Foreground" Value="{DynamicResource MutedForegroundBrush}" />
             </Style>
         </Style>
     </ControlTheme>

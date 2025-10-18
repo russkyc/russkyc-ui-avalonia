@@ -55,6 +55,11 @@
                             <Setter Property="TextWrapping" Value="Wrap" />
                         </Style>
                     </ItemsControl.Styles>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding }"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </DataTemplate>
         </Setter>

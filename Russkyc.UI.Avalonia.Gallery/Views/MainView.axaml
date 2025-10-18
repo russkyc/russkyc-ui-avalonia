@@ -14,16 +14,17 @@
         <vm:MainViewModel />
     </Design.DataContext>
     <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0">
-        <Grid ColumnDefinitions="250,*">
+        <Grid ColumnDefinitions="250,2,*">
             <Border
                 Grid.Column="0"
                 BorderBrush="{DynamicResource BorderBrush}"
                 BorderThickness="0,0,1,0">
-                <ScrollViewer>
+                <ScrollViewer CornerRadius="0">
                     <views:Sidebar DataContext="{Binding}" />
                 </ScrollViewer>
             </Border>
-            <ScrollViewer Grid.Column="1">
+            <GridSplitter Grid.Column="1"/>
+            <ScrollViewer Grid.Column="2">
                 <ContentControl Content="{Binding ActivePage}" />
             </ScrollViewer>
         </Grid>

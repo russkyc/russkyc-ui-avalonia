@@ -35,7 +35,7 @@
                     <TextBox Classes="Clearable">Clear</TextBox>
                     <TextBox Classes="ShowHide" PasswordChar="•">Password</TextBox>
                     <TextBox Watermark="Watermark" />
-                    <TextBox UseFloatingWatermark="True" Watermark="Floating Watermark">Content</TextBox>
+                    <TextBox MaxHeight="240" AcceptsReturn="True" UseFloatingWatermark="True" Watermark="Floating Watermark">Content</TextBox>
                     <TextBox Text="Error">
                         <DataValidationErrors.Error>
                             <system:Exception />

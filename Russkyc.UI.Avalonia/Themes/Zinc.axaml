@@ -2,7 +2,7 @@
     <!--  Defaults  -->
     <CornerRadius x:Key="Radius">5</CornerRadius>
     <Thickness x:Key="BorderThickness">1</Thickness>
-    <Thickness x:Key="ActiveBorderThickness">1</Thickness>
+    <Thickness x:Key="ActiveBorderThickness">1.5</Thickness>
     <Thickness x:Key="Padding">12,7</Thickness>
     <x:Double x:Key="ControlMinHeight">36</x:Double>
     <!--  Theme  -->
@@ -27,7 +27,8 @@
             <Color x:Key="Destructive">#EF4444</Color>
             <Color x:Key="DestructiveForeground">#FAFAFA</Color>
             <Color x:Key="Border">#E4E4E7</Color>
-            <Color x:Key="Input">#E4E4E7</Color>
+            <Color x:Key="Input">#9B9B9E</Color>
+            <Color x:Key="InputBackground">#FFFFFF</Color>
             <Color x:Key="LightOverlay">#06FFFFFF</Color>
             <Color x:Key="LightenOverlay">#12FFFFFF</Color>
             <Color x:Key="DarkOverlay">#06000000</Color>
@@ -55,7 +56,8 @@
             <Color x:Key="Destructive">#7F1D1D</Color>
             <Color x:Key="DestructiveForeground">#FAFAFA</Color>
             <Color x:Key="Border">#27272A</Color>
-            <Color x:Key="Input">#27272A</Color>
+            <Color x:Key="Input">#606063</Color>
+            <Color x:Key="InputBackground">#0F1013</Color>
             <Color x:Key="LightOverlay">#06FFFFFF</Color>
             <Color x:Key="LightenOverlay">#12FFFFFF</Color>
             <Color x:Key="DarkOverlay">#06000000</Color>

@@ -128,7 +128,7 @@
         <!--  Pressed State  -->
         <Style Selector="^:pressed">
             <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource RadioButtonForegroundPressed}" />
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
             </Style>
             <Style Selector="^ /template/ Ellipse#OuterEllipse">
                 <Setter Property="Stroke" Value="{DynamicResource BorderBrush}" />
@@ -263,7 +263,7 @@
                 <Style Selector="^:checked">
                     <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
                     <Style Selector="^ /template/ Border#PART_ButtonRoot">
-                        <Setter Property="Background" Value="{DynamicResource DarkenOverlayBrush}" />
+                        <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
                     </Style>
                     <Style Selector="^:pressed">
                         <Style Selector="^ /template/ Border#PART_Overlay">
@@ -348,6 +348,9 @@
                         <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
                     </Style>
                     <Style Selector="^:pressed">
+                        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                            <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
+                        </Style>
                         <Style Selector="^ /template/ Border#PART_Overlay">
                             <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
                         </Style>
