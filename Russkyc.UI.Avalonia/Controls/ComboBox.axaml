@@ -266,7 +266,6 @@
         <!--  Error State  -->
         <Style Selector="^:error /template/ Border#PART_Border">
             <Setter Property="BorderBrush" Value="{DynamicResource DestructiveBrush}" />
-            <Setter Property="Background" Value="{DynamicResource ActiveFocusDestructiveBorderBrush}"/>
         </Style>
 
         <!--  Focus Pressed State  -->

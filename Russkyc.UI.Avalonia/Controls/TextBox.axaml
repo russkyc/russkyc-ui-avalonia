@@ -228,7 +228,6 @@
         <Style Selector="^:error">
             <Style Selector="^ /template/ Border#PART_BorderElement">
                 <Setter Property="BorderBrush" Value="{DynamicResource DestructiveBrush}" />
-                <Setter Property="Background" Value="{DynamicResource ActiveFocusDestructiveBorderBrush}"/>
             </Style>
             <Style Selector="^:focus">
                 <Style Selector="^ /template/ Border#PART_ActiveBorderElement">
