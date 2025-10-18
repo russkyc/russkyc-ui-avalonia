@@ -13,7 +13,6 @@ public class FocusBorderRadiusConverter : IValueConverter
         if (value is not CornerRadius thickness) return null;
         var padding = 2;
         return new CornerRadius(thickness.TopLeft+padding, thickness.TopRight+padding, thickness.BottomRight+padding, thickness.BottomLeft+padding);
-        return null;
     }
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
