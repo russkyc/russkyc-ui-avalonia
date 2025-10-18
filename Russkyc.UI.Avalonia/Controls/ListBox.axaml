@@ -1,0 +1,133 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <ListBox Width="240">
+                <ListBoxItem>Test</ListBoxItem>
+                <ListBoxItem>Test</ListBoxItem>
+                <ListBoxItem>Test</ListBoxItem>
+                <ListBoxItem>Test</ListBoxItem>
+            </ListBox>
+        </Border>
+    </Design.PreviewWith>
+    <Thickness x:Key="ListBoxItemPadding">12,9,12,12</Thickness>
+    <ControlTheme x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Radius}" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+        <Setter Property="Background" Value="{DynamicResource InputBackgroundBrush}" />
+        <Setter Property="Padding" Value="{DynamicResource ComboBoxItemThemePadding}" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    x:Name="PART_ItemBorder"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="{TemplateBinding CornerRadius}">
+                    <Grid>
+                        <Border
+                            x:Name="PART_Overlay"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}" />
+                        <ContentPresenter
+                            x:Name="PART_ContentPresenter"
+                            Padding="{TemplateBinding Padding}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+
+        <!--  PointerOver state  -->
+        <Style Selector="^:pointerover">
+            <Style Selector="^ /template/ Border#PART_Overlay">
+                <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
+            </Style>
+        </Style>
+
+        <!--  Disabled state  -->
+        <Style Selector="^:disabled /template/ ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource MutedBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource MutedForegroundBrush}" />
+        </Style>
+
+        <!--  Pressed state  -->
+        <Style Selector="^:pressed">
+            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+            <Style Selector="^ /template/ Border#PART_Overlay">
+                <Setter Property="Background" Value="{DynamicResource SurfaceOverlayDeepenBrush}" />
+            </Style>
+        </Style>
+
+        <!--  Selected state  -->
+        <Style Selector="^:selected">
+            <Style Selector="^ /template/ ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PrimaryForegroundBrush}" />
+            </Style>
+            <!--  Selected Disabled state  -->
+            <Style Selector="^:disabled /template/ ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource ComboBoxItemBackgroundSelectedDisabled}" />
+                <Setter Property="Foreground" Value="{DynamicResource ComboBoxItemForegroundSelectedDisabled}" />
+            </Style>
+            <!--  Selected PointerOver state  -->
+            <Style Selector="^:pointerover /template/ ContentPresenter">
+                <Style Selector="^ /template/ Border#PART_Overlay">
+                    <Setter Property="Background" Value="{DynamicResource LightOverlayBrush}" />
+                </Style>
+            </Style>
+            <!--  Selected Pressed state  -->
+            <Style Selector="^:pressed /template/ ContentPresenter">
+                <Style Selector="^ /template/ Border#PART_Overlay">
+                    <Setter Property="Background" Value="{DynamicResource LightenOverlayBrush}" />
+                </Style>
+            </Style>
+        </Style>
+    </ControlTheme>
+    <ControlTheme x:Key="{x:Type ListBox}" TargetType="ListBox">
+        <Setter Property="Padding" Value="4"></Setter>
+        <Setter Property="CornerRadius" Value="{DynamicResource Radius}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+        <Setter Property="Background" Value="{DynamicResource InputBackground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.IsScrollChainingEnabled" Value="True" />
+        <Setter Property="ScrollViewer.IsScrollInertiaEnabled" Value="True" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Name="border"
+                        ClipToBounds="{TemplateBinding ClipToBounds}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                    <ScrollViewer Name="PART_ScrollViewer"
+                                  VerticalSnapPointsType="{TemplateBinding (ScrollViewer.VerticalSnapPointsType)}"
+                                  HorizontalSnapPointsType="{TemplateBinding (ScrollViewer.HorizontalSnapPointsType)}"
+                                  HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
+                                  VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
+                                  IsScrollChainingEnabled="{TemplateBinding (ScrollViewer.IsScrollChainingEnabled)}"
+                                  IsScrollInertiaEnabled="{TemplateBinding (ScrollViewer.IsScrollInertiaEnabled)}"
+                                  IsDeferredScrollingEnabled="{TemplateBinding (ScrollViewer.IsDeferredScrollingEnabled)}"
+                                  AllowAutoHide="{TemplateBinding (ScrollViewer.AllowAutoHide)}"
+                                  BringIntoViewOnFocusChange="{TemplateBinding (ScrollViewer.BringIntoViewOnFocusChange)}">
+                        <ItemsPresenter Name="PART_ItemsPresenter"
+                                        ItemsPanel="{TemplateBinding ItemsPanel}"
+                                        Margin="{TemplateBinding Padding}" />
+                    </ScrollViewer>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
