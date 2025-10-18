@@ -21,7 +21,7 @@
     <SolidColorBrush x:Key="ActiveBorderBrush" Color="{DynamicResource Border}" />
     <SolidColorBrush x:Key="ActiveFocusBorderBrush" Color="{DynamicResource Border}" Opacity="0.75" />
     <SolidColorBrush x:Key="InputBrush" Color="{DynamicResource Input}" />
-    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{DynamicResource Input}" />
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{DynamicResource Background}" />
     <SolidColorBrush x:Key="LightOverlayBrush" Color="{DynamicResource LightOverlay}" />
     <SolidColorBrush x:Key="LightenOverlayBrush" Color="{DynamicResource LightenOverlay}" />
     <SolidColorBrush x:Key="DarkOverlayBrush" Color="{DynamicResource DarkOverlay}" />

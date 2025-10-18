@@ -1,8 +1,63 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.ListBoxView">
-    Welcome to Avalonia!
+﻿<UserControl
+    x:Class="Russkyc.UI.Avalonia.Gallery.Views.Pages.ListBoxView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel Margin="24" Spacing="24">
+        <StackPanel Spacing="-2">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Text="ListBox" />
+            <TextBlock Text="Displays a ListBox component" />
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="ListBox Variants Preview" />
+            <Border Classes="Card">
+                <StackPanel
+                    Width="300"
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+                    <ListBox HorizontalAlignment="Stretch">
+                        <ListBoxItem>Apple</ListBoxItem>
+                        <ListBoxItem>Banana</ListBoxItem>
+                        <ListBoxItem>Blueberry</ListBoxItem>
+                        <ListBoxItem>Grapes</ListBoxItem>
+                        <ListBoxItem>Pineapple</ListBoxItem>
+                    </ListBox>
+                    <ListBox
+                        HorizontalAlignment="Stretch"
+                        IsEnabled="False">
+                        <ListBoxItem>Apple</ListBoxItem>
+                        <ListBoxItem>Banana</ListBoxItem>
+                        <ListBoxItem>Blueberry</ListBoxItem>
+                        <ListBoxItem>Grapes</ListBoxItem>
+                        <ListBoxItem>Pineapple</ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Spacing="8">
+            <TextBlock
+                FontSize="16"
+                FontWeight="SemiBold"
+                Text="Code" />
+            <ThemeVariantScope RequestedThemeVariant="Dark">
+                <TextBox
+                    Name="CodeBlock"
+                    Padding="12"
+                    CornerRadius="12"
+                    FontSize="16"
+                    IsReadOnly="True" />
+            </ThemeVariantScope>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

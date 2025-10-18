@@ -1,14 +1,21 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=netstandard">
     <Design.PreviewWith>
-        <Border Padding="20">
-            <ListBox Width="240">
-                <ListBoxItem>Test</ListBoxItem>
-                <ListBoxItem>Test</ListBoxItem>
-                <ListBoxItem>Test</ListBoxItem>
-                <ListBoxItem>Test</ListBoxItem>
+        <StackPanel Spacing="12" Margin="20">
+            <ListBox SelectionMode="Multiple" Width="240">
+                <ListBoxItem>Tesla Model S</ListBoxItem>
+                <ListBoxItem>Ford Mustang</ListBoxItem>
+                <ListBoxItem>BMW 3 Series</ListBoxItem>
+                <ListBoxItem>Toyota Camry</ListBoxItem>
             </ListBox>
-        </Border>
+            <ListBox Width="240" IsEnabled="False">
+                <ListBoxItem>Tesla Model S</ListBoxItem>
+                <ListBoxItem>Ford Mustang</ListBoxItem>
+                <ListBoxItem>BMW 3 Series</ListBoxItem>
+                <ListBoxItem>Toyota Camry</ListBoxItem>
+            </ListBox>
+        </StackPanel>
     </Design.PreviewWith>
     <Thickness x:Key="ListBoxItemPadding">12,9,12,12</Thickness>
     <ControlTheme x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem">
@@ -95,11 +102,18 @@
     </ControlTheme>
     <ControlTheme x:Key="{x:Type ListBox}" TargetType="ListBox">
         <Setter Property="Padding" Value="4"></Setter>
-        <Setter Property="CornerRadius" Value="{DynamicResource Radius}"/>
+        <Setter Property="CornerRadius" Value="{DynamicResource Radius}" />
         <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
         <Setter Property="Background" Value="{DynamicResource InputBackground}" />
         <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource BorderThickness}" />
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel Spacing="2" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.IsScrollChainingEnabled" Value="True" />
@@ -124,10 +138,17 @@
                                   BringIntoViewOnFocusChange="{TemplateBinding (ScrollViewer.BringIntoViewOnFocusChange)}">
                         <ItemsPresenter Name="PART_ItemsPresenter"
                                         ItemsPanel="{TemplateBinding ItemsPanel}"
-                                        Margin="{TemplateBinding Padding}" />
+                                        Margin="{TemplateBinding Padding}">
+                        </ItemsPresenter>
                     </ScrollViewer>
                 </Border>
             </ControlTemplate>
         </Setter>
+
+        <!--  Disabled state  -->
+        <Style Selector="^:disabled /template/ Border#border">
+            <Setter Property="Background" Value="{DynamicResource MutedBrush}" />
+        </Style>
+
     </ControlTheme>
 </ResourceDictionary>

@@ -151,6 +151,14 @@
         <RadioButton
             Classes="Toggle Navigation"
             Command="{Binding OpenPageCommand}"
+            Content="ListBox">
+            <RadioButton.CommandParameter>
+                <pages:ListBoxView />
+            </RadioButton.CommandParameter>
+        </RadioButton>
+        <RadioButton
+            Classes="Toggle Navigation"
+            Command="{Binding OpenPageCommand}"
             Content="Card">
             <RadioButton.CommandParameter>
                 <pages:CardView />
